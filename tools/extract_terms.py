@@ -14,7 +14,7 @@ SCBD definition (W3C CBD Member Submission):
 CBD(node) = {(node,p,o)} + CBD(o) for each blank node o
 
 Usage:
-    python extract_terms.py --version 14.1.0 [--source-dir ...] [--output-dir dist]
+    python extract_terms.py --version 14.1.0 [--source-dir ...] [--output-dir docs]
 """
 import argparse
 import sys
@@ -193,8 +193,8 @@ def main() -> None:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("dist"),
-        help="Root output directory (default: dist/)",
+        default=Path("docs"),
+        help="Root output directory (default: docs/)",
     )
     args = parser.parse_args()
 
@@ -204,10 +204,10 @@ def main() -> None:
     if args.source_dir:
         turtle_dir = args.source_dir
     else:
-        # Auto-detect: look for bundle dir relative to CWD or script location
+        # Auto-detect: bundle in CWD, or in sibling gist repo
         candidates = [
             Path.cwd() / bundle / "ontologies" / "turtle",
-            Path(__file__).parent.parent / bundle / "ontologies" / "turtle",
+            Path(__file__).parent.parent.parent / "gist" / bundle / "ontologies" / "turtle",
         ]
         turtle_dir = next((p for p in candidates if p.exists()), None)
         if turtle_dir is None:
