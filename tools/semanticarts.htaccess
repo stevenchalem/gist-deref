@@ -1,0 +1,73 @@
+RewriteEngine on
+
+# GitHub Pages base URL for static gist ontology files.
+# Update the GHPAGES value in every rule below when the repository is published.
+# Placeholder: https://semanticarts.github.io/gist-www
+#
+# Expected directory layout on GitHub Pages:
+#   {GHPAGES}/terms/{Term}.{ttl,rdf,jsonld,html}
+#   {GHPAGES}/ontology/{name}.{ttl,rdf,jsonld}      (versioned + unversioned copies)
+#   {GHPAGES}/docs/index-en.html                    (WIDOCO full-ontology HTML)
+#   {GHPAGES}/index.html                            (namespace landing page)
+
+# ---------------------------------------------------------------------------
+# /ns/ontology/gist/  — namespace URI → landing page
+# ---------------------------------------------------------------------------
+RewriteRule ^ns/ontology/gist/$ https://semanticarts.github.io/gist-www/ [R=303,L]
+
+# ---------------------------------------------------------------------------
+# /ns/ontology/gist/{Term}  — per-term SCBD files with content negotiation
+# 303 See Other is correct for conneg redirects (RFC 7231 §6.4.4)
+# Rules are tested in server-preference order; client q-values are not parsed.
+# ---------------------------------------------------------------------------
+
+RewriteCond %{HTTP_ACCEPT} text/turtle [NC]
+RewriteRule ^ns/ontology/gist/([^/]+)$ https://semanticarts.github.io/gist-www/terms/$1.ttl [R=303,L]
+
+RewriteCond %{HTTP_ACCEPT} application/rdf\+xml [NC]
+RewriteRule ^ns/ontology/gist/([^/]+)$ https://semanticarts.github.io/gist-www/terms/$1.rdf [R=303,L]
+
+RewriteCond %{HTTP_ACCEPT} application/(ld\+)?json [NC]
+RewriteRule ^ns/ontology/gist/([^/]+)$ https://semanticarts.github.io/gist-www/terms/$1.jsonld [R=303,L]
+
+# HTML (browsers): redirect to term anchor in WIDOCO full-ontology docs.
+# Replace with terms/$1.html once per-term HTML pages are generated.
+RewriteCond %{HTTP_ACCEPT} text/html [NC]
+RewriteRule ^ns/ontology/gist/([^/]+)$ https://semanticarts.github.io/gist-www/docs/index-en.html#$1 [R=303,L]
+
+# Default (Accept: */*, curl, wget, unknown clients) → Turtle
+RewriteRule ^ns/ontology/gist/([^/]+)$ https://semanticarts.github.io/gist-www/terms/$1.ttl [R=303,L]
+
+# ---------------------------------------------------------------------------
+# /ontology/{name}  — whole-ontology document IRIs with content negotiation
+# Handles both unversioned (gistCore) and versioned (gistCore14.1.0) IRIs.
+# owl:versionIRI and rdfs:isDefinedBy in the ontology files use these IRIs.
+# ---------------------------------------------------------------------------
+
+# Explicit format extension already present — pass through unchanged.
+# Must come before the extensionless conneg rules.
+# Pattern matches gistCore14.1.0.ttl: (.+) captures "gistCore14.1.0", (ttl|…) captures "ttl".
+RewriteRule ^ontology/(.+)\.(ttl|rdf|jsonld)$ https://semanticarts.github.io/gist-www/ontology/$1.$2 [R=303,L]
+
+RewriteCond %{HTTP_ACCEPT} text/turtle [NC]
+RewriteRule ^ontology/([^/]+)$ https://semanticarts.github.io/gist-www/ontology/$1.ttl [R=303,L]
+
+RewriteCond %{HTTP_ACCEPT} application/rdf\+xml [NC]
+RewriteRule ^ontology/([^/]+)$ https://semanticarts.github.io/gist-www/ontology/$1.rdf [R=303,L]
+
+RewriteCond %{HTTP_ACCEPT} application/(ld\+)?json [NC]
+RewriteRule ^ontology/([^/]+)$ https://semanticarts.github.io/gist-www/ontology/$1.jsonld [R=303,L]
+
+# HTML → WIDOCO documentation root
+RewriteCond %{HTTP_ACCEPT} text/html [NC]
+RewriteRule ^ontology/([^/]+)$ https://semanticarts.github.io/gist-www/docs/ [R=303,L]
+
+# Default → Turtle
+RewriteRule ^ontology/([^/]+)$ https://semanticarts.github.io/gist-www/ontology/$1.ttl [R=303,L]
+
+# ---------------------------------------------------------------------------
+# Everything else — backward-compatible pass-through to existing server.
+# Covers legacy URLs like /semanticarts/gistCore, /semanticarts/gist11.0.0_webDownload.zip, etc.
+# Change to 301 once the new routing has been validated in production.
+# ---------------------------------------------------------------------------
+RewriteRule ^(.+)$ https://ontologies.semanticarts.com/$1 [R=302,L]
