@@ -3,32 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>gist term tester</title>
+  <title>gist redirect simulator</title>
   <style>
     :root {
-      color-scheme: light;
       --bg: #f6f7f8;
       --surface: #ffffff;
-      --text: #182026;
-      --muted: #66727d;
-      --line: #d7dde2;
+      --text: #17212b;
+      --muted: #5d6a75;
+      --line: #d5dce2;
       --field: #fbfcfd;
       --accent: #176b87;
       --accent-strong: #0f536a;
-      --accent-soft: #e7f3f6;
-      --danger: #8f2d23;
-      --danger-soft: #fff0ec;
-      --code-bg: #101820;
-      --code-text: #edf5f7;
-      --focus: #bf7f12;
+      --focus: rgba(191, 127, 18, 0.35);
     }
 
     * {
       box-sizing: border-box;
-    }
-
-    [hidden] {
-      display: none !important;
     }
 
     body {
@@ -41,53 +31,24 @@
       line-height: 1.5;
     }
 
-    header {
-      border-bottom: 1px solid var(--line);
-      background: var(--surface);
-    }
-
-    .wrap {
-      width: min(1180px, calc(100% - 32px));
+    main {
+      width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
-    }
-
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      min-height: 72px;
+      padding: 34px 0;
     }
 
     h1 {
-      margin: 0;
-      font-size: 1.2rem;
+      margin: 0 0 18px;
+      font-size: 1.35rem;
       font-weight: 700;
-    }
-
-    .namespace {
-      color: var(--muted);
-      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
-      font-size: 0.86rem;
-      overflow-wrap: anywhere;
-      text-align: right;
-    }
-
-    main {
-      padding: 28px 0 40px;
-    }
-
-    .tool {
-      display: grid;
-      gap: 18px;
     }
 
     form {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(220px, 280px) auto;
-      gap: 14px;
+      grid-template-columns: minmax(0, 1fr) minmax(210px, 260px) auto;
+      gap: 12px;
       align-items: end;
-      padding: 18px;
+      padding: 16px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--surface);
@@ -111,6 +72,12 @@
       overflow: hidden;
     }
 
+    .iri-prefix,
+    input {
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+      font-size: 0.9rem;
+    }
+
     .iri-prefix {
       display: flex;
       align-items: center;
@@ -119,8 +86,6 @@
       padding: 0 12px;
       border-right: 1px solid var(--line);
       color: var(--muted);
-      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
-      font-size: 0.86rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -133,29 +98,25 @@
       font: inherit;
     }
 
-    input,
+    input {
+      flex: 0 0 clamp(8.5rem, 20%, 12rem);
+      width: clamp(8.5rem, 20%, 12rem);
+      min-width: 8.5rem;
+      min-height: 44px;
+      padding: 0 12px;
+      border: 0;
+      background: transparent;
+      color: var(--text);
+    }
+
     select {
       width: 100%;
       min-height: 44px;
+      padding: 0 40px 0 12px;
       border: 1px solid var(--line);
       border-radius: 6px;
       background: var(--field);
       color: var(--text);
-    }
-
-    input {
-      flex: 0 0 clamp(8.5rem, 20%, 13rem);
-      width: clamp(8.5rem, 20%, 13rem);
-      min-width: 8.5rem;
-      padding: 0 12px;
-      border: 0;
-      border-radius: 0;
-      background: transparent;
-      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
-    }
-
-    select {
-      padding: 0 40px 0 12px;
     }
 
     button {
@@ -174,115 +135,22 @@
       border-color: var(--accent-strong);
     }
 
-    button:disabled {
-      border-color: var(--line);
-      background: #e9edf0;
-      color: var(--muted);
-      cursor: not-allowed;
-    }
-
     input:focus,
     select:focus,
     button:focus-visible,
     .iri-control:focus-within {
-      outline: 3px solid rgba(191, 127, 18, 0.35);
+      outline: 3px solid var(--focus);
       outline-offset: 2px;
     }
 
-    .result {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--surface);
-      overflow: hidden;
-    }
-
-    .result-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      min-height: 50px;
-      padding: 10px 14px;
-      border-bottom: 1px solid var(--line);
-      background: var(--accent-soft);
-    }
-
-    .status {
-      min-width: 0;
-      color: var(--text);
-      font-size: 0.9rem;
-      font-weight: 700;
-      overflow-wrap: anywhere;
-    }
-
-    .result-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-shrink: 0;
-    }
-
-    .result-actions a,
-    .result-actions button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 34px;
-      padding: 0 12px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .result-actions a {
-      border: 1px solid var(--line);
-      background: var(--surface);
-      color: var(--accent-strong);
-    }
-
-    .result-actions button {
-      min-height: 34px;
-      border-color: var(--accent-strong);
-      background: var(--accent-strong);
-    }
-
-    pre {
-      margin: 0;
-      min-height: 420px;
-      max-height: 68vh;
-      padding: 18px;
-      overflow: auto;
-      background: var(--code-bg);
-      color: var(--code-text);
-      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
-      font-size: 0.88rem;
-      line-height: 1.55;
-      tab-size: 2;
-      white-space: pre-wrap;
-      overflow-wrap: anywhere;
-    }
-
-    .is-error .result-bar {
-      background: var(--danger-soft);
-    }
-
-    .is-error .status {
-      color: var(--danger);
+    .error {
+      min-height: 1.4em;
+      margin: 10px 0 0;
+      color: #8f2d23;
+      font-size: 0.92rem;
     }
 
     @media (max-width: 860px) {
-      .topbar {
-        align-items: flex-start;
-        flex-direction: column;
-        justify-content: center;
-        padding: 14px 0;
-      }
-
-      .namespace {
-        text-align: left;
-      }
-
       form {
         grid-template-columns: 1fr;
       }
@@ -294,12 +162,9 @@
     }
 
     @media (max-width: 560px) {
-      .wrap {
-        width: min(100% - 20px, 1180px);
-      }
-
       main {
-        padding-top: 16px;
+        width: min(100% - 20px, 1120px);
+        padding-top: 20px;
       }
 
       form {
@@ -320,68 +185,37 @@
         flex: 1 1 auto;
         width: 100%;
         min-width: 0;
-        min-height: 44px;
-      }
-
-      .result-bar {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .result-actions {
-        width: 100%;
-      }
-
-      .result-actions a,
-      .result-actions button {
-        flex: 1;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap topbar">
-      <h1>gist term tester</h1>
-      <div class="namespace">https://w3id.org/semanticarts/ns/ontology/gist/</div>
-    </div>
-  </header>
-
   <main>
-    <div class="wrap tool">
-      <form id="lookup-form">
-        <div>
-          <label for="term">Term IRI</label>
-          <div class="iri-control">
-            <span class="iri-prefix" aria-hidden="true">https://w3id.org/semanticarts/ns/ontology/gist/</span>
-            <input id="term" name="term" value="Account" autocomplete="off" autocapitalize="none" spellcheck="false" required>
-          </div>
-        </div>
+    <h1>gist redirect simulator</h1>
 
-        <div>
-          <label for="mime">MIME type</label>
-          <select id="mime" name="mime">
-            <option value="text/turtle">text/turtle</option>
-            <option value="application/rdf+xml">application/rdf+xml</option>
-            <option value="application/ld+json">application/ld+json</option>
-            <option value="application/json">application/json</option>
-          </select>
+    <form id="redirect-form">
+      <div>
+        <label for="term">Term IRI</label>
+        <div class="iri-control">
+          <span class="iri-prefix" aria-hidden="true">https://w3id.org/semanticarts/ns/ontology/gist/</span>
+          <input id="term" name="term" value="Account" autocomplete="off" autocapitalize="none" spellcheck="false" required>
         </div>
+      </div>
 
-        <button id="submit" type="submit">Submit</button>
-      </form>
+      <div>
+        <label for="mime">MIME type</label>
+        <select id="mime" name="mime">
+          <option value="text/turtle">text/turtle</option>
+          <option value="application/rdf+xml">application/rdf+xml</option>
+          <option value="application/ld+json">application/ld+json</option>
+          <option value="application/json">application/json</option>
+        </select>
+      </div>
 
-      <section id="result" class="result" aria-live="polite">
-        <div class="result-bar">
-          <div id="status" class="status">Ready</div>
-          <div class="result-actions">
-            <a id="file-link" href="#" hidden>Open file</a>
-            <button id="copy" type="button" disabled>Copy</button>
-          </div>
-        </div>
-        <pre><code id="content"></code></pre>
-      </section>
-    </div>
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="error" class="error" role="alert"></p>
   </main>
 
   <script>
@@ -393,17 +227,10 @@
       "application/json": "jsonld"
     };
 
-    const form = document.getElementById("lookup-form");
+    const form = document.getElementById("redirect-form");
     const termInput = document.getElementById("term");
     const mimeSelect = document.getElementById("mime");
-    const submitButton = document.getElementById("submit");
-    const result = document.getElementById("result");
-    const statusLine = document.getElementById("status");
-    const content = document.getElementById("content");
-    const fileLink = document.getElementById("file-link");
-    const copyButton = document.getElementById("copy");
-
-    let lastContent = "";
+    const error = document.getElementById("error");
 
     function normalizeTerm(value) {
       let term = value.trim();
@@ -429,116 +256,24 @@
       return term;
     }
 
-    function pathFor(term, mimeType) {
-      const extension = formats[mimeType];
-
-      if (!extension) {
-        throw new Error("Unsupported MIME type.");
-      }
-
-      return `terms/${encodeURIComponent(term)}.${extension}`;
-    }
-
-    function setLoading(message) {
-      result.classList.remove("is-error");
-      statusLine.textContent = message;
-      content.textContent = "";
-      fileLink.hidden = true;
-      copyButton.disabled = true;
-      submitButton.disabled = true;
-      submitButton.textContent = "Loading";
-    }
-
-    function setSuccess(message, text, filePath) {
-      result.classList.remove("is-error");
-      statusLine.textContent = message;
-      content.textContent = text;
-      lastContent = text;
-      fileLink.href = filePath;
-      fileLink.hidden = false;
-      copyButton.disabled = !text;
-    }
-
-    function setError(error) {
-      result.classList.add("is-error");
-      statusLine.textContent = "Error";
-      content.textContent = error.message;
-      lastContent = "";
-      fileLink.hidden = true;
-      copyButton.disabled = true;
-    }
-
-    function updateAddress(term, mimeType) {
-      const params = new URLSearchParams();
-      params.set("term", term);
-      params.set("mime", mimeType);
-      history.replaceState(null, "", `${location.pathname}?${params.toString()}`);
-    }
-
-    async function loadTerm(event) {
-      if (event) {
-        event.preventDefault();
-      }
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      error.textContent = "";
 
       try {
         const term = normalizeTerm(termInput.value);
-        const mimeType = mimeSelect.value;
-        const filePath = pathFor(term, mimeType);
-        termInput.value = term;
+        const extension = formats[mimeSelect.value];
 
-        setLoading(`${BASE_IRI}${term} | ${mimeType}`);
-
-        const response = await fetch(filePath, {
-          headers: { "Accept": mimeType },
-          cache: "no-cache"
-        });
-
-        if (!response.ok) {
-          throw new Error(`${response.status} ${response.statusText || "Not Found"}: ${filePath}`);
+        if (!extension) {
+          throw new Error("Unsupported MIME type.");
         }
 
-        const text = await response.text();
-        setSuccess(`${response.status} ${response.statusText || "OK"} | ${mimeType} | ${filePath}`, text, filePath);
-        updateAddress(term, mimeType);
-      } catch (error) {
-        setError(error);
-      } finally {
-        submitButton.disabled = false;
-        submitButton.textContent = "Submit";
-      }
-    }
-
-    copyButton.addEventListener("click", async () => {
-      if (!lastContent) {
-        return;
-      }
-
-      try {
-        await navigator.clipboard.writeText(lastContent);
-        copyButton.textContent = "Copied";
-        window.setTimeout(() => {
-          copyButton.textContent = "Copy";
-        }, 1200);
-      } catch (error) {
-        setError(new Error("Clipboard access was blocked."));
+        termInput.value = term;
+        window.location.href = `terms/${encodeURIComponent(term)}.${extension}`;
+      } catch (exception) {
+        error.textContent = exception.message;
       }
     });
-
-    form.addEventListener("submit", loadTerm);
-
-    const params = new URLSearchParams(location.search);
-    const queryTerm = params.get("term");
-    const queryMime = params.get("mime");
-
-    if (queryTerm) {
-      termInput.value = queryTerm;
-    }
-
-    if (queryMime && formats[queryMime]) {
-      mimeSelect.value = queryMime;
-    }
-
-    loadTerm();
   </script>
 </body>
 </html>
