@@ -1,0 +1,122 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b336",
+      "owl:inverseOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b120",
+      "owl:inverseOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b240",
+      "@type": "owl:Restriction",
+      "owl:allValuesFrom": {
+        "@id": "gist:OrderedCollection"
+      },
+      "owl:onProperty": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b201",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isMemberOf"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Network"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b152",
+      "owl:inverseOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b226",
+      "owl:inverseOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b241",
+      "@type": "owl:Restriction",
+      "owl:cardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:onProperty": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b187",
+      "owl:inverseOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b196",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isMemberOf"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Network"
+      }
+    },
+    {
+      "@id": "gist:isFirstMemberOf",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b80",
+      "owl:inverseOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b222",
+      "owl:inverseOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "gist:isMemberOf",
+      "@type": "owl:ObjectProperty",
+      "gist:rangeIncludes": [
+        {
+          "@id": "gist:Collection"
+        },
+        {
+          "@id": "gist:Organization"
+        }
+      ],
+      "rdfs:comment": "DEFINITION: Relates a member individual to the thing, such as a collection or organization, that it is a member of.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "is member of",
+      "skos:definition": "Relates a member individual to the thing, such as a collection or organization, that it is a member of.",
+      "skos:prefLabel": "is member of"
+    }
+  ]
+}

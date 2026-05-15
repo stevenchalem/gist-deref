@@ -1,0 +1,47 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:isFirstMemberOf rdfs:subPropertyOf gist:isMemberOf .
+
+gist:isMemberOf a owl:ObjectProperty ;
+    rdfs:label "is member of"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates a member individual to the thing, such as a collection or organization, that it is a member of."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates a member individual to the thing, such as a collection or organization, that it is a member of."^^xsd:string ;
+    skos:prefLabel "is member of"^^xsd:string ;
+    gist:rangeIncludes gist:Collection,
+        gist:Organization .
+
+[] owl:inverseOf gist:isMemberOf .
+
+[] owl:inverseOf gist:isMemberOf .
+
+[] owl:inverseOf gist:isMemberOf .
+
+[] a owl:Restriction ;
+    owl:onProperty gist:isMemberOf ;
+    owl:someValuesFrom gist:Network .
+
+[] a owl:Restriction ;
+    owl:onProperty gist:isMemberOf ;
+    owl:someValuesFrom gist:Network .
+
+[] owl:inverseOf gist:isMemberOf .
+
+[] owl:inverseOf gist:isMemberOf .
+
+[] a owl:Restriction ;
+    owl:allValuesFrom gist:OrderedCollection ;
+    owl:onProperty gist:isMemberOf .
+
+[] a owl:Restriction ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onProperty gist:isMemberOf .
+
+[] owl:inverseOf gist:isMemberOf .
+
+[] owl:inverseOf gist:isMemberOf .
+

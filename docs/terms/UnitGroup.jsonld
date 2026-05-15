@@ -1,0 +1,233 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b350",
+      "rdf:first": {
+        "@id": "gist:UnitGroup"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:UnitOfMeasure"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b383",
+      "rdf:first": {
+        "@id": "gist:UnitGroup"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:UnitOfMeasure"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:UnitGroup",
+      "@type": "owl:Class",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdfs:comment": [
+        "DEFINITION: A collection of units of measure that can all be used to measure the same aspects.",
+        "NOTE: Typically there is one unit group per aspect. An example of an aspect with two unit groups is vehicle efficiency, which can be measured by miles per gallon (distance per volume) or by liters per 100 kilometers (volume per distance). These two units of measure need to be in different unit groups because they have different values of exponents. When adding a unit of measure to a unit group, make sure it has the same exponents as the other members of the unit group.",
+        "EXAMPLE: The units of measure bit, byte, kilobit, kilobyte, etc. are all in the same unit group because they can all be used to measure an amount of data."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Unit Group",
+      "rdfs:subClassOf": [
+        {
+          "@id": "gist:Collection"
+        },
+        {
+          "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b335"
+        }
+      ],
+      "skos:definition": "A collection of units of measure that can all be used to measure the same aspects.",
+      "skos:example": "The units of measure bit, byte, kilobit, kilobyte, etc. are all in the same unit group because they can all be used to measure an amount of data.",
+      "skos:prefLabel": "Unit Group",
+      "skos:scopeNote": "Typically there is one unit group per aspect. An example of an aspect with two unit groups is vehicle efficiency, which can be measured by miles per gallon (distance per volume) or by liters per 100 kilometers (volume per distance). These two units of measure need to be in different unit groups because they have different values of exponents. When adding a unit of measure to a unit group, make sure it has the same exponents as the other members of the unit group."
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b335",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b336"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b336",
+      "owl:inverseOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b377",
+      "rdf:first": {
+        "@id": "gist:UnitGroup"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:UnitOfMeasure"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b356",
+      "rdf:first": {
+        "@id": "gist:UnitGroup"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:UnitOfMeasure"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b368",
+      "rdf:first": {
+        "@id": "gist:UnitGroup"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:UnitOfMeasure"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b365",
+      "rdf:first": {
+        "@id": "gist:UnitGroup"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:UnitOfMeasure"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b374",
+      "rdf:first": {
+        "@id": "gist:UnitGroup"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:UnitOfMeasure"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:hasUnitGroup",
+      "rdfs:range": {
+        "@id": "gist:UnitGroup"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b380",
+      "rdf:first": {
+        "@id": "gist:UnitGroup"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:UnitOfMeasure"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b371",
+      "rdf:first": {
+        "@id": "gist:UnitGroup"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:UnitOfMeasure"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b353",
+      "rdf:first": {
+        "@id": "gist:UnitGroup"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:UnitOfMeasure"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b359",
+      "rdf:first": {
+        "@id": "gist:UnitGroup"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:UnitOfMeasure"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b347",
+      "rdf:first": {
+        "@id": "gist:UnitGroup"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:UnitOfMeasure"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b362",
+      "rdf:first": {
+        "@id": "gist:UnitGroup"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:UnitOfMeasure"
+          }
+        ]
+      }
+    }
+  ]
+}

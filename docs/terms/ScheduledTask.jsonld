@@ -1,0 +1,54 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:ScheduledTask",
+      "@type": "owl:Class",
+      "owl:equivalentClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b294"
+      },
+      "rdfs:comment": [
+        "NOTE: If work on the task has already started, but has not yet ended, it will have an actual start datetime. If the task is completed, it will also have an actual end datetime. The task always retains its planned start time, and thus continues to be a scheduled task.",
+        "DEFINITION: A task with a planned start datetime."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Scheduled Task",
+      "rdfs:subClassOf": [
+        {
+          "@id": "gist:ScheduledEvent"
+        },
+        {
+          "@id": "gist:Task"
+        }
+      ],
+      "skos:definition": "A task with a planned start datetime.",
+      "skos:prefLabel": "Scheduled Task",
+      "skos:scopeNote": "If work on the task has already started, but has not yet ended, it will have an actual start datetime. If the task is completed, it will also have an actual end datetime. The task always retains its planned start time, and thus continues to be a scheduled task."
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b294",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "gist:ScheduledEvent"
+          },
+          {
+            "@id": "gist:Task"
+          }
+        ]
+      }
+    }
+  ]
+}

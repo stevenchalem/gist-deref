@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/offersToProvide">
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates an offer to the thing being made available for exchange.</skos:definition>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: This will most often be a good or service, but could be an amount of money, e.g., for currency exchange.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: An offer to provide a specific product in exchange for an amount of money or to pay a certain price for a home that is for sale.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates an offer to the thing being made available for exchange.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">offers to provide</rdfs:label>
+    <gist:domainIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Offer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An offer to provide a specific product in exchange for an amount of money or to pay a certain price for a home that is for sale.</skos:example>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0"/>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">offers to provide</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This will most often be a good or service, but could be an amount of money, e.g., for currency exchange.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ndfd66d7f0f4d459a8ec599499a65c2e2b207">
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/offersToProvide"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ElectronicAddress">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ndfd66d7f0f4d459a8ec599499a65c2e2b390">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoLocation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Address">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A PO Box, a URL to a PDF file.</skos:example>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Content"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0"/>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reference to a place (real or virtual) that can be located by some routing algorithm and where messages or things can be sent or received.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Address</skos:prefLabel>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A PO Box, a URL to a PDF file.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A reference to a place (real or virtual) that can be located by some routing algorithm and where messages or things can be sent or received.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Address</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ndfd66d7f0f4d459a8ec599499a65c2e2b257">
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoLocation"/>
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/refersTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ndfd66d7f0f4d459a8ec599499a65c2e2b342">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoLocation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ndfd66d7f0f4d459a8ec599499a65c2e2b259">
+    <rdf:first rdf:nodeID="ndfd66d7f0f4d459a8ec599499a65c2e2b257"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ndfd66d7f0f4d459a8ec599499a65c2e2b341">
+    <rdf:rest rdf:nodeID="ndfd66d7f0f4d459a8ec599499a65c2e2b342"/>
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ndfd66d7f0f4d459a8ec599499a65c2e2b389">
+    <rdf:rest rdf:nodeID="ndfd66d7f0f4d459a8ec599499a65c2e2b390"/>
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/hasAddress">
+    <rdfs:range rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ndfd66d7f0f4d459a8ec599499a65c2e2b258">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Address"/>
+    <rdf:rest rdf:nodeID="ndfd66d7f0f4d459a8ec599499a65c2e2b259"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalAddress">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Address"/>
+  </rdf:Description>
+</rdf:RDF>

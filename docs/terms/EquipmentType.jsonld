@@ -1,0 +1,38 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:EquipmentType",
+      "@type": "owl:Class",
+      "rdfs:comment": "DEFINITION: A category of equipment.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Equipment Type",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      },
+      "skos:definition": "A category of equipment.",
+      "skos:prefLabel": "Equipment Type"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b98",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isCategorizedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:EquipmentType"
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:conversionFactor",
+      "@type": [
+        "owl:FunctionalProperty",
+        "owl:DatatypeProperty"
+      ],
+      "rdfs:comment": [
+        "EXAMPLE: In the equation 1 inch = 0.0254 meters, the value 0.0254 is the conversion factor of inch.",
+        "NOTE: To convert a numeric value from one unit of measure to another, multiply by the conversion factor of the first unit and then divide by the conversion factor of the second unit.\r\n\r\n\tFor example, to convert 27 feet to yards:\r\n\r\n\t\tthe conversion factor of foot is 0.3048\r\n\t\tthe conversion factor of yard is 0.9144\r\n\r\n\t\tso\r\n\r\n\t\t27 feet = (27 x 0.3048) / 0.9144 = 9 yards",
+        "DEFINITION: A value that relates a unit of measure to units of the International System of Units."
+      ],
+      "rdfs:domain": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "conversion factor",
+      "rdfs:range": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b343"
+      },
+      "rdfs:seeAlso": {
+        "@id": "gist:conversionOffset"
+      },
+      "skos:definition": "A value that relates a unit of measure to units of the International System of Units.",
+      "skos:example": "In the equation 1 inch = 0.0254 meters, the value 0.0254 is the conversion factor of inch.",
+      "skos:prefLabel": "conversion factor",
+      "skos:scopeNote": "To convert a numeric value from one unit of measure to another, multiply by the conversion factor of the first unit and then divide by the conversion factor of the second unit.\r\n\r\n\tFor example, to convert 27 feet to yards:\r\n\r\n\t\tthe conversion factor of foot is 0.3048\r\n\t\tthe conversion factor of yard is 0.9144\r\n\r\n\t\tso\r\n\r\n\t\t27 feet = (27 x 0.3048) / 0.9144 = 9 yards"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b343",
+      "@type": "rdfs:Datatype",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "xsd:decimal"
+          },
+          {
+            "@id": "xsd:double"
+          }
+        ]
+      }
+    }
+  ]
+}

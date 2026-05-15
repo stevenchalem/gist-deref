@@ -1,0 +1,124 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:KnowledgeConcept",
+      "rdfs:subClassOf": {
+        "@id": "gist:IntellectualProperty"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b143",
+      "rdf:first": {
+        "@id": "gist:IntellectualProperty"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Organization"
+          },
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:GeoRegion",
+      "owl:disjointWith": {
+        "@id": "gist:IntellectualProperty"
+      }
+    },
+    {
+      "@id": "gist:GeoPoint",
+      "owl:disjointWith": {
+        "@id": "gist:IntellectualProperty"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b395",
+      "rdf:first": {
+        "@id": "gist:IntellectualProperty"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Organization"
+          },
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b31",
+      "rdf:first": {
+        "@id": "gist:IntellectualProperty"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Organization"
+          },
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:isAssignmentOf",
+      "gist:rangeIncludes": {
+        "@id": "gist:IntellectualProperty"
+      }
+    },
+    {
+      "@id": "gist:IntellectualProperty",
+      "@type": "owl:Class",
+      "owl:disjointWith": [
+        {
+          "@id": "gist:Magnitude"
+        },
+        {
+          "@id": "gist:PhysicalSubstance"
+        },
+        {
+          "@id": "gist:PhysicalIdentifiableItem"
+        },
+        {
+          "@id": "gist:UnitOfMeasure"
+        },
+        {
+          "@id": "gist:Organization"
+        }
+      ],
+      "rdfs:comment": [
+        "DEFINITION: An intangible work, invention, or concept, independent of its being expressed in text, audio, video, image, or live performance. IP can also be tacit knowledge, know-how, or skill.",
+        "NOTE: For literature this could be called the 'Work,' except that 'work' is a highly overloaded term (expenditure of energy, resource consumption, art). Often the first expression precedes our recognition of the IP, but subsequent expressions are known to be derivatives of the IP, even if they are expression-to-expression translations (or copies).",
+        "EXAMPLE: The Old Man and The Sea; the Page Rank algorithm; the brand Coca Cola.",
+        "NOTE: This concept includes works that are out of copyright or were never formally registered; the defining feature is not that it is legally protected but that it is an intangible creation of the human mind."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Intellectual Property",
+      "skos:definition": "An intangible work, invention, or concept, independent of its being expressed in text, audio, video, image, or live performance. IP can also be tacit knowledge, know-how, or skill.",
+      "skos:example": "The Old Man and The Sea; the Page Rank algorithm; the brand Coca Cola.",
+      "skos:prefLabel": "Intellectual Property",
+      "skos:scopeNote": [
+        "For literature this could be called the 'Work,' except that 'work' is a highly overloaded term (expenditure of energy, resource consumption, art). Often the first expression precedes our recognition of the IP, but subsequent expressions are known to be derivatives of the IP, even if they are expression-to-expression translations (or copies).",
+        "This concept includes works that are out of copyright or were never formally registered; the defining feature is not that it is legally protected but that it is an intangible creation of the human mind."
+      ]
+    }
+  ]
+}

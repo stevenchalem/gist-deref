@@ -1,0 +1,36 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "gist:idText",
+  "@type": "owl:DatatypeProperty",
+  "rdfs:comment": [
+    "NOTE: A common use case would be for preexisting internal company identifiers.",
+    "NOTE: Often, there will be just one identifying text string. More would be appropriate if the individual had different identifiers, such as employee number and social security number. A good way to model that would be to have functional subproperties of idText, such as departmentNumber.",
+    "EXAMPLE: The id text for a car is '4Y1SL65848Z411439'; the id text for the HR department of some company is H31415.",
+    "DEFINITION: A text string that identifies an individual.",
+    "NOTE: This property is an alternative to using the property gist:isIdentifiedBy in conjunction with instances of the class gist:ID."
+  ],
+  "rdfs:isDefinedBy": {
+    "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+  },
+  "rdfs:label": "id text",
+  "rdfs:range": {
+    "@id": "xsd:string"
+  },
+  "skos:definition": "A text string that identifies an individual.",
+  "skos:example": "The id text for a car is '4Y1SL65848Z411439'; the id text for the HR department of some company is H31415.",
+  "skos:prefLabel": "id text",
+  "skos:scopeNote": [
+    "Often, there will be just one identifying text string. More would be appropriate if the individual had different identifiers, such as employee number and social security number. A good way to model that would be to have functional subproperties of idText, such as departmentNumber.",
+    "A common use case would be for preexisting internal company identifiers.",
+    "This property is an alternative to using the property gist:isIdentifiedBy in conjunction with instances of the class gist:ID."
+  ]
+}

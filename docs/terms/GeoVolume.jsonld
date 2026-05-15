@@ -1,0 +1,97 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b158",
+      "rdf:first": {
+        "@id": "gist:GeoVolume"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "gist:GeoVolume",
+      "@type": "owl:Class",
+      "owl:equivalentClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b123"
+      },
+      "rdfs:comment": [
+        "EXAMPLE: An oil reservoir, the body of a lake, or an airspace.",
+        "DEFINITION: A three-dimensional space on or near the surface of the Earth."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Geographic Volume",
+      "rdfs:subClassOf": {
+        "@id": "gist:GeoLocation"
+      },
+      "skos:definition": "A three-dimensional space on or near the surface of the Earth.",
+      "skos:example": "An oil reservoir, the body of a lake, or an airspace.",
+      "skos:prefLabel": "Geographic Volume"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b123",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "gist:GeoLocation"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b124"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b126"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b124",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b125"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b125",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_volume"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b126",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b127"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:GeoPoint"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b127",
+      "owl:inverseOf": {
+        "@id": "gist:isGeoContainedIn"
+      }
+    }
+  ]
+}

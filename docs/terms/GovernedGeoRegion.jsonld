@@ -1,0 +1,88 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:GovernedGeoRegion",
+      "@type": "owl:Class",
+      "owl:equivalentClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b131"
+      },
+      "rdfs:comment": [
+        "DEFINITION: A geographic region governed by at least one government organization.",
+        "NOTE: Geographic regions do not need not be physically contiguous in order to constitute a governed geographic region; e.g., Alaska and Hawaii are part of the region governed by the United States."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Governed Geographic Region",
+      "rdfs:subClassOf": {
+        "@id": "gist:GeoRegion"
+      },
+      "skos:definition": "A geographic region governed by at least one government organization.",
+      "skos:prefLabel": "Governed Geographic Region",
+      "skos:scopeNote": "Geographic regions do not need not be physically contiguous in order to constitute a governed geographic region; e.g., Alaska and Hawaii are part of the region governed by the United States."
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b131",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "gist:GeoRegion"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b132"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b132",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isGovernedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:GovernmentOrganization"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b87",
+      "rdf:first": {
+        "@id": "gist:GovernedGeoRegion"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b86"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b86",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isGovernedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:CountryGovernment"
+      }
+    },
+    {
+      "@id": "gist:CountryGeoRegion",
+      "rdfs:subClassOf": {
+        "@id": "gist:GovernedGeoRegion"
+      }
+    }
+  ]
+}

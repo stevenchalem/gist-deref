@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:Medium",
+      "@type": "owl:Class",
+      "rdfs:comment": [
+        "DEFINITION: A physical material on which a work can be rendered, represented, or implemented.",
+        "EXAMPLE: Paper, clay, a computer monitor."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Medium",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      },
+      "skos:definition": "A physical material on which a work can be rendered, represented, or implemented.",
+      "skos:example": "Paper, clay, a computer monitor.",
+      "skos:prefLabel": "Medium"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b283",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isRenderedOn"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Medium"
+      }
+    }
+  ]
+}

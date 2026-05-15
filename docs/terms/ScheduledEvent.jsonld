@@ -1,0 +1,78 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:ScheduledEvent",
+      "@type": "owl:Class",
+      "owl:equivalentClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b290"
+      },
+      "rdfs:comment": [
+        "NOTE: If the event already started, but has not yet ended, it is a contemporary event with an actual start datetime. If the event is over, it is a historical event having an actual end datetime. The event always retains its planned start datetime, and thus continues to be a scheduled event.",
+        "DEFINITION: An event with a planned start datetime."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Scheduled Event",
+      "rdfs:subClassOf": {
+        "@id": "gist:Event"
+      },
+      "skos:definition": "An event with a planned start datetime.",
+      "skos:prefLabel": "Scheduled Event",
+      "skos:scopeNote": "If the event already started, but has not yet ended, it is a contemporary event with an actual start datetime. If the event is over, it is a historical event having an actual end datetime. The event always retains its planned start datetime, and thus continues to be a scheduled event."
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b290",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "gist:Event"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b291"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b291",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:plannedStartDateTime"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b295",
+      "rdf:first": {
+        "@id": "gist:ScheduledEvent"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Task"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:ScheduledTask",
+      "rdfs:subClassOf": {
+        "@id": "gist:ScheduledEvent"
+      }
+    }
+  ]
+}

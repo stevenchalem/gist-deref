@@ -1,0 +1,71 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b172",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:uniqueText"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b146",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:uniqueText"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "gist:uniqueText",
+      "@type": [
+        "owl:DatatypeProperty",
+        "owl:FunctionalProperty"
+      ],
+      "gist:domainIncludes": [
+        {
+          "@id": "gist:Text"
+        },
+        {
+          "@id": "gist:MediaType"
+        },
+        {
+          "@id": "gist:ID"
+        },
+        {
+          "@id": "gist:Tag"
+        }
+      ],
+      "rdfs:comment": [
+        "NOTE: Note that the uniqueness only goes in one direction: a product catalog number might also be an employee ID.",
+        "DEFINITION: The unique string value of some content object, to be used when there is no possibility of having more than one value.",
+        "EXAMPLE: The unique string for a vehicle identification number."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "unique text",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:containedText"
+      },
+      "skos:definition": "The unique string value of some content object, to be used when there is no possibility of having more than one value.",
+      "skos:example": "The unique string for a vehicle identification number.",
+      "skos:prefLabel": "unique text",
+      "skos:scopeNote": "Note that the uniqueness only goes in one direction: a product catalog number might also be an employee ID."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "gist:Building",
+  "@type": "owl:Class",
+  "owl:deprecated": true,
+  "rdfs:comment": [
+    "EXAMPLE: A house, school, store, factory, chicken coop.",
+    "DEFINITION: A relatively permanent man-made structure situated on a plot of land, having a roof and walls, commonly used for dwelling, entertaining, or working.",
+    "NOTE: User discretion can be applied to edge cases: e.g., is a traditional yurt 'relatively permanently situated' although it is portable and has a tent-like construction?",
+    "EXAMPLE: Negative examples: houseboats (not built on land), caves (not man-made), food trucks and RVs (not permanently situated)."
+  ],
+  "rdfs:isDefinedBy": {
+    "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+  },
+  "rdfs:label": "Building",
+  "rdfs:subClassOf": {
+    "@id": "gist:Landmark"
+  },
+  "skos:definition": "A relatively permanent man-made structure situated on a plot of land, having a roof and walls, commonly used for dwelling, entertaining, or working.",
+  "skos:example": [
+    "A house, school, store, factory, chicken coop.",
+    "Negative examples: houseboats (not built on land), caves (not man-made), food trucks and RVs (not permanently situated)."
+  ],
+  "skos:prefLabel": "Building",
+  "skos:scopeNote": "User discretion can be applied to edge cases: e.g., is a traditional yurt 'relatively permanently situated' although it is portable and has a tent-like construction?"
+}

@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "gist:AddressUsageType",
+  "@type": "owl:Class",
+  "rdfs:comment": [
+    "DEFINITION: A category indicating the context or manner in which an address may be used.",
+    "EXAMPLE: Billing, business, personal, postal, residence.",
+    "NOTE: If you are using temporal relations involving addresses, this category should be used to qualify the temporal relation rather than the address itself, since the same address may have different uses in different contexts, by different people and organizations, or at different times."
+  ],
+  "rdfs:isDefinedBy": {
+    "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+  },
+  "rdfs:label": "Address Usage Type",
+  "rdfs:subClassOf": {
+    "@id": "gist:Category"
+  },
+  "skos:definition": "A category indicating the context or manner in which an address may be used.",
+  "skos:example": "Billing, business, personal, postal, residence.",
+  "skos:prefLabel": "Address Usage Type",
+  "skos:scopeNote": "If you are using temporal relations involving addresses, this category should be used to qualify the temporal relation rather than the address itself, since the same address may have different uses in different contexts, by different people and organizations, or at different times."
+}

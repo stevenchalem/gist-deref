@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Language">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Magnitude"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalSubstance"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Language</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: Natural languages such as English and Spanish; computer languages such as OWL, Python, and XML.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A recognized, organized set of symbols and grammar.</rdfs:comment>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A recognized, organized set of symbols and grammar.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0"/>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natural languages such as English and Spanish; computer languages such as OWL, Python, and XML.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Language</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Language"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Event">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Language"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Language"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isExpressedIn">
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Language"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ndfd66d7f0f4d459a8ec599499a65c2e2b326">
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Language"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isExpressedIn"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,138 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b147",
+      "rdf:first": {
+        "@id": "gist:Content"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b141"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b146"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b141",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isAllocatedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b142"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b142",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "gist:IntellectualProperty"
+          },
+          {
+            "@id": "gist:Organization"
+          },
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b146",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:uniqueText"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "gist:Content",
+      "@type": "owl:Class",
+      "owl:disjointWith": [
+        {
+          "@id": "gist:GeoPoint"
+        },
+        {
+          "@id": "gist:GeoRegion"
+        },
+        {
+          "@id": "gist:PhysicalIdentifiableItem"
+        },
+        {
+          "@id": "gist:PhysicalSubstance"
+        },
+        {
+          "@id": "gist:UnitOfMeasure"
+        },
+        {
+          "@id": "gist:Organization"
+        }
+      ],
+      "rdfs:comment": [
+        "NOTE: Categories are not content until they are written down.",
+        "EXAMPLE: The literary work 'The Adventures of Huckleberry Finn' by Mark Twain, independent of any particular edition.",
+        "DEFINITION: Information available in some medium.",
+        "NOTE: This class includes both abstract content and its expression, but it must have at least one expression in order to be content. For example, the idea a writer has for a book is not content until it is expressed in some form, but a single content object may have multiple expressions - e.g., the particular print and audio editions."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Content",
+      "skos:definition": "Information available in some medium.",
+      "skos:example": "The literary work 'The Adventures of Huckleberry Finn' by Mark Twain, independent of any particular edition.",
+      "skos:prefLabel": "Content",
+      "skos:scopeNote": [
+        "Categories are not content until they are written down.",
+        "This class includes both abstract content and its expression, but it must have at least one expression in order to be content. For example, the idea a writer has for a book is not content until it is expressed in some form, but a single content object may have multiple expressions - e.g., the particular print and audio editions."
+      ]
+    },
+    {
+      "@id": "gist:ID",
+      "rdfs:subClassOf": {
+        "@id": "gist:Content"
+      }
+    },
+    {
+      "@id": "gist:ContentExpression",
+      "rdfs:subClassOf": {
+        "@id": "gist:Content"
+      }
+    },
+    {
+      "@id": "gist:Address",
+      "rdfs:subClassOf": {
+        "@id": "gist:Content"
+      }
+    },
+    {
+      "@id": "gist:containedText",
+      "gist:domainIncludes": {
+        "@id": "gist:Content"
+      }
+    },
+    {
+      "@id": "gist:isAbout",
+      "rdfs:domain": {
+        "@id": "gist:Content"
+      }
+    }
+  ]
+}

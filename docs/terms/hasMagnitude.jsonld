@@ -1,0 +1,236 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:hasMagnitude",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": [
+        "EXAMPLE: A car or model of car has magnitudes for length, width, weight, average miles per gallon, etc.",
+        "DEFINITION: Relates a thing to a magnitude."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "has magnitude",
+      "rdfs:range": {
+        "@id": "gist:Magnitude"
+      },
+      "skos:definition": "Relates a thing to a magnitude.",
+      "skos:example": "A car or model of car has magnitudes for length, width, weight, average miles per gallon, etc.",
+      "skos:prefLabel": "has magnitude"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b264",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b265"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b265",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_mass"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b271",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b272"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b272",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_volume"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b114",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b115"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b115",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_area"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b124",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b125"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b125",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_volume"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b269",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b270"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b270",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_mass"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b333",
+      "@type": "owl:Restriction",
+      "owl:onClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b334"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:qualifiedCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b334",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_duration"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b106",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b107"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b107",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_altitude"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b266",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b267"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b267",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_volume"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b2",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b3"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b3",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_financial_balance"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b55",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b56"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b56",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_probability"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    }
+  ]
+}

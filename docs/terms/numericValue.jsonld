@@ -1,0 +1,100 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:numericValue",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "DEFINITION: The actual value of a magnitude.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "numeric value",
+      "rdfs:range": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b401"
+      },
+      "skos:definition": "The actual value of a magnitude.",
+      "skos:prefLabel": "numeric value"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b401",
+      "@type": "rdfs:Datatype",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "xsd:byte"
+          },
+          {
+            "@id": "xsd:decimal"
+          },
+          {
+            "@id": "xsd:double"
+          },
+          {
+            "@id": "xsd:float"
+          },
+          {
+            "@id": "xsd:int"
+          },
+          {
+            "@id": "xsd:integer"
+          },
+          {
+            "@id": "xsd:long"
+          },
+          {
+            "@id": "xsd:negativeInteger"
+          },
+          {
+            "@id": "xsd:nonNegativeInteger"
+          },
+          {
+            "@id": "xsd:nonPositiveInteger"
+          },
+          {
+            "@id": "xsd:positiveInteger"
+          },
+          {
+            "@id": "xsd:short"
+          },
+          {
+            "@id": "xsd:unsignedByte"
+          },
+          {
+            "@id": "xsd:unsignedInt"
+          },
+          {
+            "@id": "xsd:unsignedLong"
+          },
+          {
+            "@id": "xsd:unsignedShort"
+          },
+          {
+            "@id": "owl:rational"
+          },
+          {
+            "@id": "owl:real"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b168",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:numericValue"
+      },
+      "owl:someValuesFrom": {
+        "@id": "rdfs:Literal"
+      }
+    }
+  ]
+}

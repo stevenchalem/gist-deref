@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isMadeUpOf">
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vase is made of clay; water is made up of hydrogen and oxygen.</skos:example>
+    <rdfs:range rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalSubstance"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is made up of</rdfs:label>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates something to a substance that it is made up of.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates something to a substance that it is made up of.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A vase is made of clay; water is made up of hydrogen and oxygen.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is made up of</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ndfd66d7f0f4d459a8ec599499a65c2e2b268">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalSubstance"/>
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMadeUpOf"/>
+  </rdf:Description>
+</rdf:RDF>

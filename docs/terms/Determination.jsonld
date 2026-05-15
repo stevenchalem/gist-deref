@@ -1,0 +1,28 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "gist:Determination",
+  "@type": "owl:Class",
+  "rdfs:comment": [
+    "EXAMPLE: Measuring the sulfur content of crude oil; evaluating a loan application for approval; estimating the price of gas for the next three months; determining whether and by how much an interest rate should change; classifying a purchase into a budget category.",
+    "DEFINITION: An event whose purpose is to establish a specific result, value, or outcome, usually by research, measuring, evaluating, or calculating."
+  ],
+  "rdfs:isDefinedBy": {
+    "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+  },
+  "rdfs:label": "Determination",
+  "rdfs:subClassOf": {
+    "@id": "gist:Event"
+  },
+  "skos:definition": "An event whose purpose is to establish a specific result, value, or outcome, usually by research, measuring, evaluating, or calculating.",
+  "skos:example": "Measuring the sulfur content of crude oil; evaluating a loan application for approval; estimating the price of gas for the next three months; determining whether and by how much an interest rate should change; classifying a purchase into a budget category.",
+  "skos:prefLabel": "Determination"
+}

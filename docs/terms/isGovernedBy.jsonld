@@ -1,0 +1,126 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b303",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isGovernedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:CountryGovernment"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b75",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isGovernedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b76"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b76",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "gist:Organization"
+          },
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b305",
+      "owl:inverseOf": {
+        "@id": "gist:isGovernedBy"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b89",
+      "@type": "owl:Restriction",
+      "owl:maxQualifiedCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "0"
+      },
+      "owl:onClass": {
+        "@id": "gist:GovernmentOrganization"
+      },
+      "owl:onProperty": {
+        "@id": "gist:isGovernedBy"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b91",
+      "owl:inverseOf": {
+        "@id": "gist:isGovernedBy"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b86",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isGovernedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:CountryGovernment"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b132",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isGovernedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:GovernmentOrganization"
+      }
+    },
+    {
+      "@id": "gist:isGovernedBy",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": [
+        "EXAMPLE: A country geographic region is governed by a country government; the installation and use of software is governed by a license.",
+        "DEFINITION: Relates an entity to another entity that controls, directs, determines or has a guiding influence or authority over it."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "is governed by",
+      "skos:definition": "Relates an entity to another entity that controls, directs, determines or has a guiding influence or authority over it.",
+      "skos:example": "A country geographic region is governed by a country government; the installation and use of software is governed by a license.",
+      "skos:prefLabel": "is governed by"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b94",
+      "owl:inverseOf": {
+        "@id": "gist:isGovernedBy"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b84",
+      "@type": "owl:Restriction",
+      "owl:cardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:onProperty": {
+        "@id": "gist:isGovernedBy"
+      }
+    }
+  ]
+}

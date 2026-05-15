@@ -1,0 +1,49 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:exponentOfAmpere",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": [
+        "DEFINITION: The exponent of ampere in a product of powers of base units.",
+        "EXAMPLE: In the equation '1 milliampere = 0.001 x ampere'\r\n\r\n\t\tthe conversionFactor for milliampere is 0.001\r\n\t\tthe exponent of ampere is 1\r\n\t\tall other exponents are zero\r\n\r\n\t\tEvery member of a unit group containing milliampere must be a multiple of ampere."
+      ],
+      "rdfs:domain": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b346"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "exponent of ampere",
+      "rdfs:range": {
+        "@id": "xsd:decimal"
+      },
+      "skos:definition": "The exponent of ampere in a product of powers of base units.",
+      "skos:example": "In the equation '1 milliampere = 0.001 x ampere'\r\n\r\n\t\tthe conversionFactor for milliampere is 0.001\r\n\t\tthe exponent of ampere is 1\r\n\t\tall other exponents are zero\r\n\r\n\t\tEvery member of a unit group containing milliampere must be a multiple of ampere.",
+      "skos:prefLabel": "exponent of ampere"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b346",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "gist:UnitGroup"
+          },
+          {
+            "@id": "gist:UnitOfMeasure"
+          }
+        ]
+      }
+    }
+  ]
+}

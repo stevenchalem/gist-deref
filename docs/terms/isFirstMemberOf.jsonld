@@ -1,0 +1,47 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:isFirstMemberOf",
+      "@type": [
+        "owl:FunctionalProperty",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": [
+        "DEFINITION: Relates the first member of an ordered collection to the collection.",
+        "NOTE: Given the Open World Assumption, the absence of a predecessor does not entail that an ordered member is the first member of an ordered collection. This property is used to explicitly indicate the first member. Since ordered collections need not be strictly ordered, there can be more than one first member."
+      ],
+      "rdfs:domain": {
+        "@id": "gist:OrderedMember"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "is first member of",
+      "rdfs:range": {
+        "@id": "gist:OrderedCollection"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "gist:isMemberOf"
+      },
+      "skos:definition": "Relates the first member of an ordered collection to the collection.",
+      "skos:prefLabel": "is first member of",
+      "skos:scopeNote": "Given the Open World Assumption, the absence of a predecessor does not entail that an ordered member is the first member of an ordered collection. This property is used to explicitly indicate the first member. Since ordered collections need not be strictly ordered, there can be more than one first member."
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b220",
+      "owl:inverseOf": {
+        "@id": "gist:isFirstMemberOf"
+      }
+    }
+  ]
+}

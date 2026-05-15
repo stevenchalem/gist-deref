@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:plannedEndDateTime",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:endDateTime"
+      }
+    },
+    {
+      "@id": "gist:endDateTime",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": [
+        "NOTE: Values of predicates with different precisions can be compared since they are all formally xsd:datetimes.",
+        "NOTE: This property is neutral along two dimensions: precision (e.g., day, second, millisecond) and actual vs. planned. As such, it will generally not be asserted directly except in special cases (e.g., for time intervals).",
+        "DEFINITION: The date and time that something ends."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "end date time",
+      "rdfs:range": {
+        "@id": "xsd:dateTime"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "gist:atDateTime"
+      },
+      "skos:definition": "The date and time that something ends.",
+      "skos:prefLabel": "end date time",
+      "skos:scopeNote": [
+        "This property is neutral along two dimensions: precision (e.g., day, second, millisecond) and actual vs. planned. As such, it will generally not be asserted directly except in special cases (e.g., for time intervals).",
+        "Values of predicates with different precisions can be compared since they are all formally xsd:datetimes."
+      ]
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b331",
+      "@type": "owl:Restriction",
+      "owl:cardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:onProperty": {
+        "@id": "gist:endDateTime"
+      }
+    },
+    {
+      "@id": "gist:actualEndDateTime",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:endDateTime"
+      }
+    }
+  ]
+}

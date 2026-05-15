@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:System",
+      "@type": "owl:Class",
+      "owl:equivalentClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b309"
+      },
+      "rdfs:comment": [
+        "NOTE: May be used to refer to either man-made or natural systems.",
+        "DEFINITION: A composite made up of interacting or interdependent components that together operate as a whole.",
+        "EXAMPLE: A manufacturing system, a storm system."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "System",
+      "rdfs:subClassOf": {
+        "@id": "gist:Composite"
+      },
+      "skos:definition": "A composite made up of interacting or interdependent components that together operate as a whole.",
+      "skos:example": "A manufacturing system, a storm system.",
+      "skos:prefLabel": "System",
+      "skos:scopeNote": "May be used to refer to either man-made or natural systems."
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b309",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "gist:Composite"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b310"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b310",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b311"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Component"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b311",
+      "owl:inverseOf": {
+        "@id": "gist:isDirectPartOf"
+      }
+    }
+  ]
+}

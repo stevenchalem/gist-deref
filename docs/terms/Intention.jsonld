@@ -1,0 +1,311 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:Permission",
+      "rdfs:subClassOf": {
+        "@id": "gist:Intention"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b43",
+      "rdf:first": {
+        "@id": "gist:Intention"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b35"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b38"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b42"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b35",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "gist:Requirement"
+          },
+          {
+            "@id": "gist:Restriction"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b38",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasGiver"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b39"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b39",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "gist:Organization"
+          },
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b42",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isCategorizedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:DegreeOfCommitment"
+      }
+    },
+    {
+      "@id": "gist:prevents",
+      "rdfs:domain": {
+        "@id": "gist:Intention"
+      }
+    },
+    {
+      "@id": "gist:Function",
+      "rdfs:subClassOf": {
+        "@id": "gist:Intention"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b316",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasGoal"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Intention"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b13",
+      "rdf:first": {
+        "@id": "gist:Intention"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b7"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b11"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b7",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasParty"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b8"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b8",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "gist:Organization"
+          },
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b11",
+      "@type": "owl:Restriction",
+      "owl:minQualifiedCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "2"
+      },
+      "owl:onClass": {
+        "@id": "gist:Commitment"
+      },
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b12"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b12",
+      "owl:inverseOf": {
+        "@id": "gist:isDirectPartOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b249",
+      "rdf:first": {
+        "@id": "gist:Intention"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b248"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b248",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:allows"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Behavior"
+      }
+    },
+    {
+      "@id": "gist:conformsTo",
+      "gist:rangeIncludes": {
+        "@id": "gist:Intention"
+      }
+    },
+    {
+      "@id": "gist:Intention",
+      "@type": "owl:Class",
+      "owl:disjointWith": [
+        {
+          "@id": "gist:Magnitude"
+        },
+        {
+          "@id": "gist:UnitOfMeasure"
+        },
+        {
+          "@id": "gist:Organization"
+        },
+        {
+          "@id": "gist:PhysicalIdentifiableItem"
+        },
+        {
+          "@id": "gist:PhysicalSubstance"
+        }
+      ],
+      "rdfs:comment": [
+        "DEFINITION: A goal, desire, or aspiration.",
+        "NOTE: The 'teleological' aspect of a system that indicates things are done with a purpose."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Intention",
+      "skos:definition": "A goal, desire, or aspiration.",
+      "skos:prefLabel": "Intention",
+      "skos:scopeNote": "The 'teleological' aspect of a system that indicates things are done with a purpose."
+    },
+    {
+      "@id": "gist:Agreement",
+      "rdfs:subClassOf": {
+        "@id": "gist:Intention"
+      }
+    },
+    {
+      "@id": "gist:Specification",
+      "rdfs:subClassOf": {
+        "@id": "gist:Intention"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b288",
+      "rdf:first": {
+        "@id": "gist:Intention"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b287"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b287",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:prevents"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Behavior"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b320",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasGoal"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Intention"
+      }
+    },
+    {
+      "@id": "gist:GeoRegion",
+      "owl:disjointWith": {
+        "@id": "gist:Intention"
+      }
+    },
+    {
+      "@id": "gist:GeoPoint",
+      "owl:disjointWith": {
+        "@id": "gist:Intention"
+      }
+    },
+    {
+      "@id": "gist:Commitment",
+      "rdfs:subClassOf": {
+        "@id": "gist:Intention"
+      }
+    },
+    {
+      "@id": "gist:prohibits",
+      "rdfs:domain": {
+        "@id": "gist:Intention"
+      }
+    },
+    {
+      "@id": "gist:Restriction",
+      "rdfs:subClassOf": {
+        "@id": "gist:Intention"
+      }
+    },
+    {
+      "@id": "gist:Requirement",
+      "rdfs:subClassOf": {
+        "@id": "gist:Intention"
+      }
+    }
+  ]
+}

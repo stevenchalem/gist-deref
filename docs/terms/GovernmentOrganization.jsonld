@@ -1,0 +1,184 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b71",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isUnderJurisdictionOf"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:GovernmentOrganization"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b306",
+      "rdf:first": {
+        "@id": "gist:GovernmentOrganization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b303"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b304"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b303",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isGovernedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:CountryGovernment"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b304",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b305"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:GeoRegion"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b305",
+      "owl:inverseOf": {
+        "@id": "gist:isGovernedBy"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b95",
+      "rdf:first": {
+        "@id": "gist:GovernmentOrganization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b93"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b93",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b94"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:CountryGeoRegion"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b94",
+      "owl:inverseOf": {
+        "@id": "gist:isGovernedBy"
+      }
+    },
+    {
+      "@id": "gist:GovernmentOrganization",
+      "@type": "owl:Class",
+      "owl:disjointWith": {
+        "@id": "gist:IntergovernmentalOrganization"
+      },
+      "rdfs:comment": [
+        "EXAMPLE: Negative example: A corporation, which is owned and therefore not independent.",
+        "DEFINITION: An independent organization exercising political and/or regulatory authority over a political unit, people, geographical region, etc., as well as performing certain functions for this unit or body.",
+        "EXAMPLE: The State of Washington Office of Financial Management; the Food and Drug Administration; the Scottish Parliament.",
+        "NOTE: Includes administrative, regulatory, and enforcement organizations created or sanctioned by country or sub-country governments."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Government Organization",
+      "rdfs:subClassOf": {
+        "@id": "gist:Organization"
+      },
+      "skos:definition": "An independent organization exercising political and/or regulatory authority over a political unit, people, geographical region, etc., as well as performing certain functions for this unit or body.",
+      "skos:example": [
+        "Negative example: A corporation, which is owned and therefore not independent.",
+        "The State of Washington Office of Financial Management; the Food and Drug Administration; the Scottish Parliament."
+      ],
+      "skos:prefLabel": "Government Organization",
+      "skos:scopeNote": "Includes administrative, regulatory, and enforcement organizations created or sanctioned by country or sub-country governments."
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b151",
+      "@type": "owl:Restriction",
+      "owl:minQualifiedCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "2"
+      },
+      "owl:onClass": {
+        "@id": "gist:GovernmentOrganization"
+      },
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b152"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b152",
+      "owl:inverseOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "gist:isUnderJurisdictionOf",
+      "gist:rangeIncludes": {
+        "@id": "gist:GovernmentOrganization"
+      }
+    },
+    {
+      "@id": "gist:CountryGovernment",
+      "rdfs:subClassOf": {
+        "@id": "gist:GovernmentOrganization"
+      }
+    },
+    {
+      "@id": "gist:SubCountryGovernment",
+      "rdfs:subClassOf": {
+        "@id": "gist:GovernmentOrganization"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b132",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isGovernedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:GovernmentOrganization"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b89",
+      "@type": "owl:Restriction",
+      "owl:maxQualifiedCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "0"
+      },
+      "owl:onClass": {
+        "@id": "gist:GovernmentOrganization"
+      },
+      "owl:onProperty": {
+        "@id": "gist:isGovernedBy"
+      }
+    }
+  ]
+}

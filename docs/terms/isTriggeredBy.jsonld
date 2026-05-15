@@ -1,0 +1,51 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:isTriggeredBy",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": [
+        "DEFINITION: Relates a contingency, such as an event or obligation, to the event that gives rise to it.",
+        "NOTE: For obligations, this property describes what must happen to trigger the contingent obligation. Other uses include controls, processes, etc.",
+        "EXAMPLE: Fire insurance is contingent on a particular building burning down; the death benefit payout on a life insurance policy is contingent on the death of the insured person."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "is triggered by",
+      "skos:definition": "Relates a contingency, such as an event or obligation, to the event that gives rise to it.",
+      "skos:example": "Fire insurance is contingent on a particular building burning down; the death benefit payout on a life insurance policy is contingent on the death of the insured person.",
+      "skos:prefLabel": "is triggered by",
+      "skos:scopeNote": "For obligations, this property describes what must happen to trigger the contingent obligation. Other uses include controls, processes, etc."
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b57",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isTriggeredBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Event"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b66",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isTriggeredBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Event"
+      }
+    }
+  ]
+}

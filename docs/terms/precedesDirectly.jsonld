@@ -1,0 +1,54 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b234",
+      "owl:inverseOf": {
+        "@id": "gist:precedesDirectly"
+      }
+    },
+    {
+      "@id": "gist:precedesDirectly",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": [
+        "NOTE: If two items in an ordered collection share the same position, they both directly precede the following element.",
+        "DEFINITION: A generic ordering relation indicating that the subject comes immediately before the object.",
+        "NOTE: Typically this predicate would be used asymmetrically and irreflexively, but the ontology does not formalize this.",
+        "NOTE: It is safest to use this property only when the directness has a semantic correspondence with the world. Only break a direct link by inserting an intermediate item when that change corresponds to a change in the world."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "precedes directly",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:precedes"
+      },
+      "skos:definition": "A generic ordering relation indicating that the subject comes immediately before the object.",
+      "skos:prefLabel": "precedes directly",
+      "skos:scopeNote": [
+        "Typically this predicate would be used asymmetrically and irreflexively, but the ontology does not formalize this.",
+        "If two items in an ordered collection share the same position, they both directly precede the following element.",
+        "It is safest to use this property only when the directness has a semantic correspondence with the world. Only break a direct link by inserting an intermediate item when that change corresponds to a change in the world."
+      ]
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b232",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:precedesDirectly"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:OrderedMember"
+      }
+    }
+  ]
+}

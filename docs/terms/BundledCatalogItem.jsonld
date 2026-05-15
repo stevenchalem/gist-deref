@@ -1,0 +1,65 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:BundledCatalogItem",
+      "@type": "owl:Class",
+      "owl:equivalentClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b24"
+      },
+      "rdfs:comment": [
+        "DEFINITION: Any combination of descriptions of things offered together.",
+        "EXAMPLE: A kit containing several parts offered together; a product plus a warranty."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Bundled Catalog Item",
+      "rdfs:subClassOf": {
+        "@id": "gist:CatalogItem"
+      },
+      "skos:definition": "Any combination of descriptions of things offered together.",
+      "skos:example": "A kit containing several parts offered together; a product plus a warranty.",
+      "skos:prefLabel": "Bundled Catalog Item"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b24",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "gist:CatalogItem"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b25"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b25",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b26"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:CatalogItem"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b26",
+      "owl:inverseOf": {
+        "@id": "gist:isDirectPartOf"
+      }
+    }
+  ]
+}

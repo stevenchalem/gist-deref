@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "gist:EventSpecification",
+  "@type": "owl:Class",
+  "rdfs:comment": [
+    "NOTE: This concept is useful for risk assessment and insurance policies.",
+    "EXAMPLE: An insurance company defines the characteristics of a weather event that must be satisfied for it to qualify as a hail storm covered in its homeowner's policy; a bank defines the point at which a borrower defaults on a loan.",
+    "DEFINITION: A characterization of an event that might happen."
+  ],
+  "rdfs:isDefinedBy": {
+    "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+  },
+  "rdfs:label": "Event Specification",
+  "rdfs:subClassOf": {
+    "@id": "gist:Specification"
+  },
+  "skos:definition": "A characterization of an event that might happen.",
+  "skos:example": "An insurance company defines the characteristics of a weather event that must be satisfied for it to qualify as a hail storm covered in its homeowner's policy; a bank defines the point at which a borrower defaults on a loan.",
+  "skos:prefLabel": "Event Specification",
+  "skos:scopeNote": "This concept is useful for risk assessment and insurance policies."
+}

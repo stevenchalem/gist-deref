@@ -1,0 +1,68 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b102",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isExpressedIn"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:MediaType"
+      }
+    },
+    {
+      "@id": "gist:MediaType",
+      "@type": "owl:Class",
+      "rdfs:comment": [
+        "EXAMPLE: application/sparql-results+xml",
+        "DEFINITION: A digitized type that computer applications can recognize.",
+        "NOTE: The unique text for an IANA media type is the concatenation of the 'Type name', a slash '/', and the 'Subtype name' as provided on the page displayed when you resolve the URI of the media type."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Media Type",
+      "rdfs:seeAlso": {
+        "@id": "https://www.iana.org/assignments/media-types/media-types.xhtml"
+      },
+      "rdfs:subClassOf": [
+        {
+          "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b172"
+        },
+        {
+          "@id": "gist:Category"
+        }
+      ],
+      "skos:definition": "A digitized type that computer applications can recognize.",
+      "skos:example": "application/sparql-results+xml",
+      "skos:prefLabel": "Media Type",
+      "skos:scopeNote": "The unique text for an IANA media type is the concatenation of the 'Type name', a slash '/', and the 'Subtype name' as provided on the page displayed when you resolve the URI of the media type."
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b172",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:uniqueText"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "gist:uniqueText",
+      "gist:domainIncludes": {
+        "@id": "gist:MediaType"
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:TimeInterval",
+      "@type": "owl:Class",
+      "rdfs:comment": [
+        "NOTE: This is distinct from a duration, which describes how long a time interval lasts (e.g., one hour; 3 days; 22 minutes).",
+        "DEFINITION: A span of time with a known start time, end time, and duration. As long as two of the three are known, the third can be inferred.",
+        "EXAMPLE: 7pm to 9pm on Jan 1, 2001; fiscal year 2023 (according to some particular definition of fiscal year); the week starting at midnight of January 12, 2023 and lasting exactly 168 hours.",
+        "NOTE: An ongoing state of affairs with an unknown end time in the future cannot be a time interval; e.g. the lifespan of a living person cannot be a time interval, as the end time is unknown."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Time Interval",
+      "rdfs:subClassOf": [
+        {
+          "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b333"
+        },
+        {
+          "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b332"
+        },
+        {
+          "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b331"
+        }
+      ],
+      "skos:definition": "A span of time with a known start time, end time, and duration. As long as two of the three are known, the third can be inferred.",
+      "skos:example": "7pm to 9pm on Jan 1, 2001; fiscal year 2023 (according to some particular definition of fiscal year); the week starting at midnight of January 12, 2023 and lasting exactly 168 hours.",
+      "skos:prefLabel": "Time Interval",
+      "skos:scopeNote": [
+        "An ongoing state of affairs with an unknown end time in the future cannot be a time interval; e.g. the lifespan of a living person cannot be a time interval, as the end time is unknown.",
+        "This is distinct from a duration, which describes how long a time interval lasts (e.g., one hour; 3 days; 22 minutes)."
+      ]
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b333",
+      "@type": "owl:Restriction",
+      "owl:onClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b334"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:qualifiedCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b334",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_duration"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b332",
+      "@type": "owl:Restriction",
+      "owl:cardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:onProperty": {
+        "@id": "gist:startDateTime"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b331",
+      "@type": "owl:Restriction",
+      "owl:cardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:onProperty": {
+        "@id": "gist:endDateTime"
+      }
+    },
+    {
+      "@id": "gist:Event",
+      "owl:disjointWith": {
+        "@id": "gist:TimeInterval"
+      }
+    }
+  ]
+}

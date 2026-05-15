@@ -1,0 +1,131 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:ProductSpecification",
+      "rdfs:subClassOf": {
+        "@id": "gist:CatalogItem"
+      }
+    },
+    {
+      "@id": "gist:CatalogItem",
+      "@type": "owl:Class",
+      "rdfs:comment": [
+        "NOTE: In short, an unambiguous characterization of what it is that a potential buyer is paying for.",
+        "DEFINITION: A description of a product or service to be delivered, given in a sufficient level of detail that a receiver could determine whether delivery constituted discharge of the obligation to deliver."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Catalog Item",
+      "rdfs:subClassOf": {
+        "@id": "gist:Specification"
+      },
+      "skos:definition": "A description of a product or service to be delivered, given in a sufficient level of detail that a receiver could determine whether delivery constituted discharge of the obligation to deliver.",
+      "skos:prefLabel": "Catalog Item",
+      "skos:scopeNote": "In short, an unambiguous characterization of what it is that a potential buyer is paying for."
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b300",
+      "rdf:first": {
+        "@id": "gist:CatalogItem"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b298"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b298",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b299"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Event"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b299",
+      "owl:inverseOf": {
+        "@id": "gist:isBasedOn"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b27",
+      "rdf:first": {
+        "@id": "gist:CatalogItem"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b25"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b25",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b26"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:CatalogItem"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b26",
+      "owl:inverseOf": {
+        "@id": "gist:isDirectPartOf"
+      }
+    },
+    {
+      "@id": "gist:BundledCatalogItem",
+      "rdfs:subClassOf": {
+        "@id": "gist:CatalogItem"
+      }
+    },
+    {
+      "@id": "gist:ServiceSpecification",
+      "rdfs:subClassOf": {
+        "@id": "gist:CatalogItem"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b275",
+      "rdf:first": {
+        "@id": "gist:CatalogItem"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b274"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b274",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isCategorizedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:ProductCategory"
+      }
+    }
+  ]
+}

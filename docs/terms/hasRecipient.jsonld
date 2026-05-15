@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:hasGiver",
+      "owl:propertyDisjointWith": {
+        "@id": "gist:hasRecipient"
+      }
+    },
+    {
+      "@id": "gist:hasRecipient",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": [
+        "DEFINITION: Relates something to the participant that receives or is intended to receive it.",
+        "NOTE: This property is used in abstract contexts such as agreements, obligations, contracts, etc., whereas gist:goesToAgent is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another. However, there are contexts in which either may be appropriate, such as the giving of a gift.",
+        "EXAMPLE: An offer is made to a recipient; an obligation has a recipient to whom another person is obligated; a gift is bestowed upon a recipient."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "has recipient",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:hasParticipant"
+      },
+      "skos:definition": "Relates something to the participant that receives or is intended to receive it.",
+      "skos:example": "An offer is made to a recipient; an obligation has a recipient to whom another person is obligated; a gift is bestowed upon a recipient.",
+      "skos:prefLabel": "has recipient",
+      "skos:scopeNote": "This property is used in abstract contexts such as agreements, obligations, contracts, etc., whereas gist:goesToAgent is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another. However, there are contexts in which either may be appropriate, such as the giving of a gift."
+    }
+  ]
+}

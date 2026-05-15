@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:isBasedOn",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": [
+        "DEFINITION: The object is a foundation for, a starting point for, gave rise to, or justifies the subject.",
+        "EXAMPLE: A document is based on a document template; a metric computing the average income of a population is based on the metric for individual income."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "is based on",
+      "skos:definition": "The object is a foundation for, a starting point for, gave rise to, or justifies the subject.",
+      "skos:example": "A document is based on a document template; a metric computing the average income of a population is based on the metric for individual income.",
+      "skos:prefLabel": "is based on"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b299",
+      "owl:inverseOf": {
+        "@id": "gist:isBasedOn"
+      }
+    }
+  ]
+}

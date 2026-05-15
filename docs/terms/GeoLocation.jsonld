@@ -1,0 +1,185 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b257",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:refersTo"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:GeoLocation"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b390",
+      "rdf:first": {
+        "@id": "gist:GeoLocation"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b128",
+      "rdf:first": {
+        "@id": "gist:GeoLocation"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b124"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b126"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b124",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b125"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b125",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_volume"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b126",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b127"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:GeoPoint"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b127",
+      "owl:inverseOf": {
+        "@id": "gist:isGeoContainedIn"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b342",
+      "rdf:first": {
+        "@id": "gist:GeoLocation"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b116",
+      "rdf:first": {
+        "@id": "gist:GeoLocation"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b114"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b114",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b115"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b115",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_area"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "gist:GeoRegion",
+      "rdfs:subClassOf": {
+        "@id": "gist:GeoLocation"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b261",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:occursIn"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:GeoLocation"
+      }
+    },
+    {
+      "@id": "gist:GeoPoint",
+      "rdfs:subClassOf": {
+        "@id": "gist:GeoLocation"
+      }
+    },
+    {
+      "@id": "gist:hasPhysicalLocation",
+      "rdfs:range": {
+        "@id": "gist:GeoLocation"
+      }
+    },
+    {
+      "@id": "gist:GeoVolume",
+      "rdfs:subClassOf": {
+        "@id": "gist:GeoLocation"
+      }
+    },
+    {
+      "@id": "gist:GeoLocation",
+      "@type": "owl:Class",
+      "rdfs:comment": [
+        "NOTE: A geographic location may be a point, region, or volume.",
+        "DEFINITION: A physical location, with the earth as a frame of reference."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Geographic Location",
+      "skos:definition": "A physical location, with the earth as a frame of reference.",
+      "skos:prefLabel": "Geographic Location",
+      "skos:scopeNote": "A geographic location may be a point, region, or volume."
+    },
+    {
+      "@id": "gist:isGeoContainedIn",
+      "rdfs:domain": {
+        "@id": "gist:GeoLocation"
+      },
+      "rdfs:range": {
+        "@id": "gist:GeoLocation"
+      }
+    }
+  ]
+}

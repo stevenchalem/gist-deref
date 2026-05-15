@@ -1,0 +1,61 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:RenderedContent",
+      "@type": "owl:Class",
+      "owl:equivalentClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b282"
+      },
+      "rdfs:comment": [
+        "EXAMPLE: Words printed on paper; audio played on speakers; an image displayed on a monitor; an original painting.",
+        "DEFINITION: Content expressed via some physical medium.",
+        "NOTE: Renderings of the same file on two different monitors are separate instances of rendered content."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Rendered Content",
+      "rdfs:subClassOf": {
+        "@id": "gist:FormattedContent"
+      },
+      "skos:definition": "Content expressed via some physical medium.",
+      "skos:example": "Words printed on paper; audio played on speakers; an image displayed on a monitor; an original painting.",
+      "skos:prefLabel": "Rendered Content",
+      "skos:scopeNote": "Renderings of the same file on two different monitors are separate instances of rendered content."
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b282",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "gist:FormattedContent"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b283"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b283",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isRenderedOn"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Medium"
+      }
+    }
+  ]
+}

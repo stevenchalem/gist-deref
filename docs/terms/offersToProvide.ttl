@@ -1,0 +1,22 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:offersToProvide a owl:ObjectProperty ;
+    rdfs:label "offers to provide"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates an offer to the thing being made available for exchange."^^xsd:string,
+        "EXAMPLE: An offer to provide a specific product in exchange for an amount of money or to pay a certain price for a home that is for sale."^^xsd:string,
+        "NOTE: This will most often be a good or service, but could be an amount of money, e.g., for currency exchange."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates an offer to the thing being made available for exchange."^^xsd:string ;
+    skos:example "An offer to provide a specific product in exchange for an amount of money or to pay a certain price for a home that is for sale."^^xsd:string ;
+    skos:prefLabel "offers to provide"^^xsd:string ;
+    skos:scopeNote "This will most often be a good or service, but could be an amount of money, e.g., for currency exchange."^^xsd:string ;
+    gist:domainIncludes gist:Offer .
+
+[] a owl:Restriction ;
+    owl:onProperty gist:offersToProvide ;
+    owl:someValuesFrom owl:Thing .
+

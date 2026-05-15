@@ -1,0 +1,170 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b79",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b80"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Category"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b80",
+      "owl:inverseOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "gist:Discipline",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      }
+    },
+    {
+      "@id": "gist:Category",
+      "@type": "owl:Class",
+      "owl:disjointWith": {
+        "@id": "gist:Event"
+      },
+      "rdfs:comment": [
+        "DEFINITION: A concept or label used to categorize other instances without specifying any formal semantics.",
+        "EXAMPLE: Tags used in folksonomies; formal definitions from other systems.",
+        "NOTE: Often a type can be modeled either as an owl:Class or as a gist:Category. Use the latter if you don't care much about the formal structure of the different types, or if there is a whole hierarchy of types that are going to be managed by a group separate from the ontology developers. The formal structure may be defined elsewhere and linked to, if necessary."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Category",
+      "rdfs:subClassOf": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b29"
+      },
+      "skos:definition": "A concept or label used to categorize other instances without specifying any formal semantics.",
+      "skos:example": "Tags used in folksonomies; formal definitions from other systems.",
+      "skos:prefLabel": "Category",
+      "skos:scopeNote": "Often a type can be modeled either as an owl:Class or as a gist:Category. Use the latter if you don't care much about the formal structure of the different types, or if there is a whole hierarchy of types that are going to be managed by a group separate from the ontology developers. The formal structure may be defined elsewhere and linked to, if necessary."
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b29",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isAllocatedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b30"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b30",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "gist:IntellectualProperty"
+          },
+          {
+            "@id": "gist:Organization"
+          },
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:DegreeOfCommitment",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      }
+    },
+    {
+      "@id": "gist:EquipmentType",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      }
+    },
+    {
+      "@id": "gist:isCategorizedBy",
+      "gist:rangeIncludes": {
+        "@id": "gist:Category"
+      }
+    },
+    {
+      "@id": "gist:MediaType",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      }
+    },
+    {
+      "@id": "gist:GeneralMediaType",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      }
+    },
+    {
+      "@id": "gist:PhysicalAddressType",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      }
+    },
+    {
+      "@id": "gist:PhysicalActionType",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      }
+    },
+    {
+      "@id": "gist:Behavior",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      }
+    },
+    {
+      "@id": "gist:Tag",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      }
+    },
+    {
+      "@id": "gist:AddressUsageType",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      }
+    },
+    {
+      "@id": "gist:isAllocatedBy",
+      "gist:domainIncludes": {
+        "@id": "gist:Category"
+      }
+    },
+    {
+      "@id": "gist:Medium",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      }
+    },
+    {
+      "@id": "gist:ProductCategory",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      }
+    },
+    {
+      "@id": "gist:ElectronicAddressType",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      }
+    }
+  ]
+}

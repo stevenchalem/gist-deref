@@ -1,0 +1,79 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b178",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:goesToAgent"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b179"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b179",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "gist:Organization"
+          },
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:goesToAgent",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": [
+        "NOTE: This is not the inverse of gist:comesFromAgent, as both properties have the message or shipment as the subject.",
+        "EXAMPLE: A package is sent to a person; a purchase order email is received by a vendor.",
+        "NOTE: This property is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another, whereas gist:hasRecipient is typically used in more abstract contexts such as agreements, obligations, contracts, etc. However, there are contexts in which either may be appropriate, such as the receiving of a gift.",
+        "DEFINITION: Relates something to the agent that receives it."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "goes to agent",
+      "rdfs:range": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b385"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "gist:hasParticipant"
+      },
+      "skos:definition": "Relates something to the agent that receives it.",
+      "skos:example": "A package is sent to a person; a purchase order email is received by a vendor.",
+      "skos:prefLabel": "goes to agent",
+      "skos:scopeNote": [
+        "This is not the inverse of gist:comesFromAgent, as both properties have the message or shipment as the subject.",
+        "This property is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another, whereas gist:hasRecipient is typically used in more abstract contexts such as agreements, obligations, contracts, etc. However, there are contexts in which either may be appropriate, such as the receiving of a gift."
+      ]
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b385",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "gist:Organization"
+          },
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    }
+  ]
+}

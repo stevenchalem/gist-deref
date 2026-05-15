@@ -1,0 +1,280 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:hasUnitOfMeasure",
+      "rdfs:range": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "gist:UnitGroup",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b360",
+      "rdf:first": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "gist:conversionFactor",
+      "rdfs:domain": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b335",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b336"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b336",
+      "owl:inverseOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "gist:PhysicalSubstance",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b384",
+      "rdf:first": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b363",
+      "rdf:first": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "gist:Event",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b167",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasUnitOfMeasure"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "gist:Content",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "gist:Template",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "gist:Intention",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b372",
+      "rdf:first": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "gist:symbol",
+      "gist:domainIncludes": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "gist:Language",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b375",
+      "rdf:first": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "gist:IntellectualProperty",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b357",
+      "rdf:first": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b378",
+      "rdf:first": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "gist:GeoRegion",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "gist:GeoPoint",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "gist:SchemaMetaData",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "gist:UnitOfMeasure",
+      "@type": "owl:Class",
+      "rdfs:comment": [
+        "DEFINITION: A standard amount used to measure or specify things.",
+        "EXAMPLE: An acre is a unit for measuring area."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Unit of Measure",
+      "skos:definition": "A standard amount used to measure or specify things.",
+      "skos:example": "An acre is a unit for measuring area.",
+      "skos:prefLabel": "Unit of Measure"
+    },
+    {
+      "@id": "gist:Magnitude",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b366",
+      "rdf:first": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "gist:Organization",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b381",
+      "rdf:first": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b351",
+      "rdf:first": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "gist:conversionOffset",
+      "rdfs:domain": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b354",
+      "rdf:first": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b369",
+      "rdf:first": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b348",
+      "rdf:first": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "gist:PhysicalIdentifiableItem",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:plannedStartDateTime",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": [
+        "DEFINITION: The date and time that something is or was planned to start, with no implied precision.",
+        "NOTE: This is an abstraction over the various precisions of planned start time, and is not expected to be asserted directly. Values of predicates with different precisions can be compared since they are all formally xsd:datetimes.",
+        "NOTE: This property, unlike gist:actualStartDateTime, does not have a subproperty for microsecond precision, because planned times typically are not expressed at that level of granularity. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "planned start date time",
+      "rdfs:range": {
+        "@id": "xsd:dateTime"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "gist:startDateTime"
+      },
+      "skos:definition": "The date and time that something is or was planned to start, with no implied precision.",
+      "skos:prefLabel": "planned start date time",
+      "skos:scopeNote": [
+        "This is an abstraction over the various precisions of planned start time, and is not expected to be asserted directly. Values of predicates with different precisions can be compared since they are all formally xsd:datetimes.",
+        "This property, unlike gist:actualStartDateTime, does not have a subproperty for microsecond precision, because planned times typically are not expressed at that level of granularity. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual."
+      ]
+    },
+    {
+      "@id": "gist:plannedStartYear",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:plannedStartDateTime"
+      }
+    },
+    {
+      "@id": "gist:plannedStartMinute",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:plannedStartDateTime"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b291",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:plannedStartDateTime"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b210",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:plannedStartDateTime"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "gist:plannedStartDate",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:plannedStartDateTime"
+      }
+    }
+  ]
+}

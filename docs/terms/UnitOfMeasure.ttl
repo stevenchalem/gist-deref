@@ -1,0 +1,99 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Content owl:disjointWith gist:UnitOfMeasure .
+
+gist:Event owl:disjointWith gist:UnitOfMeasure .
+
+gist:GeoPoint owl:disjointWith gist:UnitOfMeasure .
+
+gist:GeoRegion owl:disjointWith gist:UnitOfMeasure .
+
+gist:IntellectualProperty owl:disjointWith gist:UnitOfMeasure .
+
+gist:Intention owl:disjointWith gist:UnitOfMeasure .
+
+gist:Language owl:disjointWith gist:UnitOfMeasure .
+
+gist:Magnitude owl:disjointWith gist:UnitOfMeasure .
+
+gist:Organization owl:disjointWith gist:UnitOfMeasure .
+
+gist:PhysicalIdentifiableItem owl:disjointWith gist:UnitOfMeasure .
+
+gist:PhysicalSubstance owl:disjointWith gist:UnitOfMeasure .
+
+gist:SchemaMetaData owl:disjointWith gist:UnitOfMeasure .
+
+gist:Template owl:disjointWith gist:UnitOfMeasure .
+
+gist:UnitGroup owl:disjointWith gist:UnitOfMeasure .
+
+gist:conversionFactor rdfs:domain gist:UnitOfMeasure .
+
+gist:conversionOffset rdfs:domain gist:UnitOfMeasure .
+
+gist:symbol gist:domainIncludes gist:UnitOfMeasure .
+
+gist:hasUnitOfMeasure rdfs:range gist:UnitOfMeasure .
+
+gist:UnitOfMeasure a owl:Class ;
+    rdfs:label "Unit of Measure"^^xsd:string ;
+    rdfs:comment "DEFINITION: A standard amount used to measure or specify things."^^xsd:string,
+        "EXAMPLE: An acre is a unit for measuring area."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "A standard amount used to measure or specify things."^^xsd:string ;
+    skos:example "An acre is a unit for measuring area."^^xsd:string ;
+    skos:prefLabel "Unit of Measure"^^xsd:string .
+
+[] a owl:Restriction ;
+    owl:onProperty gist:hasUnitOfMeasure ;
+    owl:someValuesFrom gist:UnitOfMeasure .
+
+[] a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf gist:isMemberOf ] ;
+    owl:someValuesFrom gist:UnitOfMeasure .
+
+[] rdf:first gist:UnitOfMeasure ;
+    rdf:rest () .
+
+[] rdf:first gist:UnitOfMeasure ;
+    rdf:rest () .
+
+[] rdf:first gist:UnitOfMeasure ;
+    rdf:rest () .
+
+[] rdf:first gist:UnitOfMeasure ;
+    rdf:rest () .
+
+[] rdf:first gist:UnitOfMeasure ;
+    rdf:rest () .
+
+[] rdf:first gist:UnitOfMeasure ;
+    rdf:rest () .
+
+[] rdf:first gist:UnitOfMeasure ;
+    rdf:rest () .
+
+[] rdf:first gist:UnitOfMeasure ;
+    rdf:rest () .
+
+[] rdf:first gist:UnitOfMeasure ;
+    rdf:rest () .
+
+[] rdf:first gist:UnitOfMeasure ;
+    rdf:rest () .
+
+[] rdf:first gist:UnitOfMeasure ;
+    rdf:rest () .
+
+[] rdf:first gist:UnitOfMeasure ;
+    rdf:rest () .
+
+[] rdf:first gist:UnitOfMeasure ;
+    rdf:rest () .
+

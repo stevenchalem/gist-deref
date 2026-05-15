@@ -1,0 +1,82 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:ContingentEvent",
+      "@type": "owl:Class",
+      "owl:equivalentClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b54"
+      },
+      "rdfs:comment": [
+        "DEFINITION: An event with a probability of happening in the future, and usually dependent upon some other event or condition.",
+        "EXAMPLE: A fire insurance payout is contingent on a particular building burning down; selling 20 shares of stock in a given company is contingent on the price dropping below $200/share; the death benefit payout on a life insurance policy is contingent on the death of the insured person."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Contingent Event",
+      "rdfs:subClassOf": {
+        "@id": "gist:Event"
+      },
+      "skos:definition": "An event with a probability of happening in the future, and usually dependent upon some other event or condition.",
+      "skos:example": "A fire insurance payout is contingent on a particular building burning down; selling 20 shares of stock in a given company is contingent on the price dropping below $200/share; the death benefit payout on a life insurance policy is contingent on the death of the insured person.",
+      "skos:prefLabel": "Contingent Event"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b54",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "gist:Event"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b55"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b57"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b55",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b56"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b56",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_probability"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b57",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isTriggeredBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Event"
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:Assignment",
+      "rdfs:subClassOf": {
+        "@id": "gist:TemporalRelation"
+      }
+    },
+    {
+      "@id": "gist:TemporalRelation",
+      "@type": "owl:Class",
+      "rdfs:comment": [
+        "DEFINITION: A relationship existing for a period of time.",
+        "EXAMPLE: The relationship between a person and their employer; the relationship between a person or business and an address.",
+        "NOTE: A temporal relation must have a minimum of two participants. For example, both the employer and the employee are participants in a temporal relation representing a period of employment. Note that 'participant' does not imply agency; a non-sentient being can participate in a temporal relation. For example, both a person and a house could be participants in a hypothetical relation 'lives at.'"
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Temporal Relation",
+      "rdfs:subClassOf": [
+        {
+          "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b323"
+        },
+        {
+          "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b324"
+        }
+      ],
+      "skos:definition": "A relationship existing for a period of time.",
+      "skos:example": "The relationship between a person and their employer; the relationship between a person or business and an address.",
+      "skos:prefLabel": "Temporal Relation",
+      "skos:scopeNote": "A temporal relation must have a minimum of two participants. For example, both the employer and the employee are participants in a temporal relation representing a period of employment. Note that 'participant' does not imply agency; a non-sentient being can participate in a temporal relation. For example, both a person and a house could be participants in a hypothetical relation 'lives at.'"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b323",
+      "@type": "owl:Restriction",
+      "owl:cardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:onProperty": {
+        "@id": "gist:startDateTime"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b324",
+      "@type": "owl:Restriction",
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "2"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasParticipant"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b20",
+      "rdf:first": {
+        "@id": "gist:TemporalRelation"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b17"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b18"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b19"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b17",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasGiver"
+      },
+      "owl:someValuesFrom": {
+        "@id": "owl:Thing"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b18",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isAssignmentOf"
+      },
+      "owl:someValuesFrom": {
+        "@id": "owl:Thing"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b19",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isAssignmentTo"
+      },
+      "owl:someValuesFrom": {
+        "@id": "owl:Thing"
+      }
+    }
+  ]
+}

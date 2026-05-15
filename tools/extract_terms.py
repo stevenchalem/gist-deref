@@ -154,31 +154,6 @@ def write_fragment(fg: Graph, term_dir: Path, local_name: str) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Whole-ontology copies
-# ---------------------------------------------------------------------------
-
-def copy_ontology_files(turtle_dir: Path, version: str, ontology_dir: Path) -> None:
-    """Copy the full per-module files into output/ontology/."""
-    import shutil
-
-    ontology_dir.mkdir(parents=True, exist_ok=True)
-    rdf_xml_dir = turtle_dir.parent / "rdf-xml"
-    jsonld_dir = turtle_dir.parent / "json-ld"
-
-    for template in SOURCE_MODULES:
-        stem = template.format(v=version).removesuffix(".ttl")
-        for src, ext in [
-            (turtle_dir / f"{stem}.ttl", ".ttl"),
-            (rdf_xml_dir / f"{stem}.rdf", ".rdf"),
-            (jsonld_dir / f"{stem}.jsonld", ".jsonld"),
-        ]:
-            if src.exists():
-                shutil.copy2(src, ontology_dir / src.name)
-            else:
-                print(f"  WARNING: ontology file not found: {src}", file=sys.stderr)
-
-
-# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -247,8 +222,6 @@ def main() -> None:
     if skipped:
         print(f"Skipped {skipped} terms (empty SCBD or malformed local name)")
 
-    print("\nCopying whole-ontology files ...")
-    copy_ontology_files(turtle_dir, version, args.output_dir / "ontology")
     print("Done.")
 
 

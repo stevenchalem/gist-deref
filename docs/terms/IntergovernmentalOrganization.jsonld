@@ -1,0 +1,75 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:IntergovernmentalOrganization",
+      "@type": "owl:Class",
+      "owl:equivalentClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b150"
+      },
+      "rdfs:comment": [
+        "EXAMPLE: The United Nations, the European Union, the Metropolitan Transit Authority.",
+        "DEFINITION: An organization whose members are government organizations. This can comprise regional, municipal, state/province, or national level entities."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Intergovernmental Organization",
+      "rdfs:subClassOf": {
+        "@id": "gist:Organization"
+      },
+      "skos:definition": "An organization whose members are government organizations. This can comprise regional, municipal, state/province, or national level entities.",
+      "skos:example": "The United Nations, the European Union, the Metropolitan Transit Authority.",
+      "skos:prefLabel": "Intergovernmental Organization"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b150",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "gist:Organization"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b151"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b151",
+      "@type": "owl:Restriction",
+      "owl:minQualifiedCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "2"
+      },
+      "owl:onClass": {
+        "@id": "gist:GovernmentOrganization"
+      },
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b152"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b152",
+      "owl:inverseOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "gist:GovernmentOrganization",
+      "owl:disjointWith": {
+        "@id": "gist:IntergovernmentalOrganization"
+      }
+    }
+  ]
+}

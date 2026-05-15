@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b19",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isAssignmentTo"
+      },
+      "owl:someValuesFrom": {
+        "@id": "owl:Thing"
+      }
+    },
+    {
+      "@id": "gist:isAssignmentTo",
+      "@type": "owl:ObjectProperty",
+      "gist:domainIncludes": {
+        "@id": "gist:Assignment"
+      },
+      "rdfs:comment": [
+        "DEFINITION: Relates something (typically an assignment) to the thing the resource is assigned to, such as a project, position, organization, pay rate, or billing rate.",
+        "NOTE: While typically this predicate will be used with gist:Assignment subjects, there may be other use cases, and therefore a domain is not specified."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "is assignment to",
+      "skos:definition": "Relates something (typically an assignment) to the thing the resource is assigned to, such as a project, position, organization, pay rate, or billing rate.",
+      "skos:prefLabel": "is assignment to",
+      "skos:scopeNote": "While typically this predicate will be used with gist:Assignment subjects, there may be other use cases, and therefore a domain is not specified."
+    }
+  ]
+}

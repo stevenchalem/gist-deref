@@ -1,0 +1,92 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:hasAspect",
+      "rdfs:range": {
+        "@id": "gist:Aspect"
+      }
+    },
+    {
+      "@id": "gistd:_Aspect_volume",
+      "@type": "gist:Aspect"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b166",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Aspect"
+      }
+    },
+    {
+      "@id": "gist:Aspect",
+      "@type": "owl:Class",
+      "owl:disjointWith": {
+        "@id": "gist:Event"
+      },
+      "rdfs:comment": [
+        "DEFINITION: A measurable characteristic.",
+        "EXAMPLE: Length, weight, cost, cycle time, defect rate, wheelbase, billing rate.",
+        "NOTE: Rule of thumb: use the least specific aspect that serves the intended purpose, increasing specificity only when required (e.g., to distinguish between two magnitudes attached to the same object).",
+        "NOTE: Depending on implementation, every aspect should be related to a unit group either directly or through a broader aspect. For example, angle of incidence could be related to the broader concept of angle, which in turn is related to a unit group, or it could be related directly to the unit group without the hierarchical relationship."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Aspect",
+      "skos:definition": "A measurable characteristic.",
+      "skos:example": "Length, weight, cost, cycle time, defect rate, wheelbase, billing rate.",
+      "skos:prefLabel": "Aspect",
+      "skos:scopeNote": [
+        "Rule of thumb: use the least specific aspect that serves the intended purpose, increasing specificity only when required (e.g., to distinguish between two magnitudes attached to the same object).",
+        "Depending on implementation, every aspect should be related to a unit group either directly or through a broader aspect. For example, angle of incidence could be related to the broader concept of angle, which in turn is related to a unit group, or it could be related directly to the unit group without the hierarchical relationship."
+      ]
+    },
+    {
+      "@id": "gistd:_Aspect_monetary_value",
+      "@type": "gist:Aspect"
+    },
+    {
+      "@id": "gist:hasUnitGroup",
+      "rdfs:domain": {
+        "@id": "gist:Aspect"
+      }
+    },
+    {
+      "@id": "gistd:_Aspect_probability",
+      "@type": "gist:Aspect"
+    },
+    {
+      "@id": "gistd:_Aspect_duration",
+      "@type": "gist:Aspect"
+    },
+    {
+      "@id": "gistd:_Aspect_area",
+      "@type": "gist:Aspect"
+    },
+    {
+      "@id": "gistd:_Aspect_financial_balance",
+      "@type": "gist:Aspect"
+    },
+    {
+      "@id": "gistd:_Aspect_altitude",
+      "@type": "gist:Aspect"
+    },
+    {
+      "@id": "gistd:_Aspect_mass",
+      "@type": "gist:Aspect"
+    }
+  ]
+}

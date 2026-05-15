@@ -1,0 +1,343 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b40",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b32",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b399",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b153",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b151"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b151",
+      "@type": "owl:Restriction",
+      "owl:minQualifiedCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "2"
+      },
+      "owl:onClass": {
+        "@id": "gist:GovernmentOrganization"
+      },
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b152"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b152",
+      "owl:inverseOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b77",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:GovernmentOrganization",
+      "rdfs:subClassOf": {
+        "@id": "gist:Organization"
+      }
+    },
+    {
+      "@id": "gist:isMemberOf",
+      "gist:rangeIncludes": {
+        "@id": "gist:Organization"
+      }
+    },
+    {
+      "@id": "gist:Content",
+      "owl:disjointWith": {
+        "@id": "gist:Organization"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b144",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b392",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b386",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:Intention",
+      "owl:disjointWith": {
+        "@id": "gist:Organization"
+      }
+    },
+    {
+      "@id": "gist:Language",
+      "owl:disjointWith": {
+        "@id": "gist:Organization"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b176",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b421",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:IntellectualProperty",
+      "owl:disjointWith": {
+        "@id": "gist:Organization"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b338",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b205",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:GeoRegion",
+      "owl:disjointWith": {
+        "@id": "gist:Organization"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b64",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:GeoPoint",
+      "owl:disjointWith": {
+        "@id": "gist:Organization"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b9",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:Magnitude",
+      "owl:disjointWith": {
+        "@id": "gist:Organization"
+      }
+    },
+    {
+      "@id": "gist:Organization",
+      "@type": "owl:Class",
+      "owl:disjointWith": [
+        {
+          "@id": "gist:UnitOfMeasure"
+        },
+        {
+          "@id": "gist:SchemaMetaData"
+        },
+        {
+          "@id": "gist:PhysicalIdentifiableItem"
+        },
+        {
+          "@id": "gist:PhysicalSubstance"
+        }
+      ],
+      "rdfs:comment": [
+        "EXAMPLE: Legal entities like companies; non-legal entities like clubs, committees, or departments.",
+        "DEFINITION: A structured entity formed to achieve specific goals, typically involving members with defined roles.",
+        "NOTE: While typically the members of organizations are people, in some cases they are other organizations; e.g., the members of the United Nations are country governments.",
+        "NOTE: Not all organizations have members, e.g. shell companies."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Organization",
+      "skos:definition": "A structured entity formed to achieve specific goals, typically involving members with defined roles.",
+      "skos:example": "Legal entities like companies; non-legal entities like clubs, committees, or departments.",
+      "skos:prefLabel": "Organization",
+      "skos:scopeNote": [
+        "Not all organizations have members, e.g. shell companies.",
+        "While typically the members of organizations are people, in some cases they are other organizations; e.g., the members of the United Nations are country governments."
+      ]
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b180",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:IntergovernmentalOrganization",
+      "rdfs:subClassOf": {
+        "@id": "gist:Organization"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b396",
+      "rdf:first": {
+        "@id": "gist:Organization"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:isAssignmentOf",
+      "gist:rangeIncludes": {
+        "@id": "gist:Organization"
+      }
+    }
+  ]
+}

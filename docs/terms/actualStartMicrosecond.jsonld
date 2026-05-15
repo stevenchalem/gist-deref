@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "gist:actualStartMicrosecond",
+  "@type": "owl:DatatypeProperty",
+  "rdfs:comment": [
+    "DEFINITION: The actual time that something started, expressed as a system time used for timestamps.",
+    "EXAMPLE: '2021-06-01T08:03:27.12324-6:00'^^xsd:dateTime",
+    "NOTE: A system time will be as precise as the system can supply, typically at least milliseconds, sometimes microseconds. The convention for timestamps, such as recording a transaction, is to specify just the end point; the start time is rarely needed. This property is defined for the cases when you do need to capture the runtime of a system process, and is then used in conjunction with gist:actualEndMicrosecond."
+  ],
+  "rdfs:isDefinedBy": {
+    "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+  },
+  "rdfs:label": "actual start microsecond",
+  "rdfs:range": {
+    "@id": "xsd:dateTime"
+  },
+  "rdfs:subPropertyOf": {
+    "@id": "gist:actualStartDateTime"
+  },
+  "skos:definition": "The actual time that something started, expressed as a system time used for timestamps.",
+  "skos:example": "'2021-06-01T08:03:27.12324-6:00'^^xsd:dateTime",
+  "skos:prefLabel": "actual start microsecond",
+  "skos:scopeNote": "A system time will be as precise as the system can supply, typically at least milliseconds, sometimes microseconds. The convention for timestamps, such as recording a transaction, is to specify just the end point; the start time is rarely needed. This property is defined for the cases when you do need to capture the runtime of a system process, and is then used in conjunction with gist:actualEndMicrosecond."
+}

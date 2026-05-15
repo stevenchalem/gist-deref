@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "gist:ElectronicAddress",
+  "@type": "owl:Class",
+  "owl:disjointWith": {
+    "@id": "gist:PhysicalAddress"
+  },
+  "rdfs:comment": [
+    "ALT: Virtual Address",
+    "DEFINITION: An address referring to a locatable virtual place that does not physically exist but is made by software or electronics to appear to do so.",
+    "EXAMPLE: A file system path, website URL, IP address, email address, mobile or landline telephone number."
+  ],
+  "rdfs:isDefinedBy": {
+    "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+  },
+  "rdfs:label": "Electronic Address",
+  "rdfs:subClassOf": {
+    "@id": "gist:Address"
+  },
+  "skos:altLabel": "Virtual Address",
+  "skos:definition": "An address referring to a locatable virtual place that does not physically exist but is made by software or electronics to appear to do so.",
+  "skos:example": "A file system path, website URL, IP address, email address, mobile or landline telephone number.",
+  "skos:prefLabel": "Electronic Address"
+}

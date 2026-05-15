@@ -1,0 +1,49 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:exponentOfKilogram",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": [
+        "EXAMPLE: In the equation '1 millimole per gram = 1 x mole per kilogram'\r\n\r\n\t\tthe conversion factor for millimole per gram is 1\r\n\t\tthe exponent of mole is 1\r\n\t\tthe exponent of kilogram is -1\r\n\t\tall other exponents are zero\r\n\r\n\t\tEvery member of a unit group containing millimole per gram must be a multiple of mole per kilogram.",
+        "DEFINITION: The exponent of kilogram in a product of powers of base units."
+      ],
+      "rdfs:domain": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b358"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "exponent of kilogram",
+      "rdfs:range": {
+        "@id": "xsd:decimal"
+      },
+      "skos:definition": "The exponent of kilogram in a product of powers of base units.",
+      "skos:example": "In the equation '1 millimole per gram = 1 x mole per kilogram'\r\n\r\n\t\tthe conversion factor for millimole per gram is 1\r\n\t\tthe exponent of mole is 1\r\n\t\tthe exponent of kilogram is -1\r\n\t\tall other exponents are zero\r\n\r\n\t\tEvery member of a unit group containing millimole per gram must be a multiple of mole per kilogram.",
+      "skos:prefLabel": "exponent of kilogram"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b358",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "gist:UnitGroup"
+          },
+          {
+            "@id": "gist:UnitOfMeasure"
+          }
+        ]
+      }
+    }
+  ]
+}

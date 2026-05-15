@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:conversionFactor",
+      "rdfs:seeAlso": {
+        "@id": "gist:conversionOffset"
+      }
+    },
+    {
+      "@id": "gist:conversionOffset",
+      "@type": [
+        "owl:FunctionalProperty",
+        "owl:DatatypeProperty"
+      ],
+      "rdfs:comment": "DEFINITION: \r\n\t\tA value used along with a conversion factor to relate a unit to its corresponding unit in the International System of Units. In the equation below, the conversion offset is 459.669607 and the conversion factor is 5/9.\r\n\r\n\t\ty degrees Fahrenheit = (y + 459.669607) x 5/9 degrees Kelvin\r\n\r\n\t\tTo convert from Fahrenheit to Kelvin, first add the offset and then multiply by the conversion factor.\r\n\r\n\t\tTo convert from Kelvin to Fahrenheit, reverse the steps: first divide by the conversion factor and then subtract the offset.",
+      "rdfs:domain": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "conversion offset",
+      "rdfs:range": {
+        "@id": "xsd:decimal"
+      },
+      "skos:definition": "\r\n\t\tA value used along with a conversion factor to relate a unit to its corresponding unit in the International System of Units. In the equation below, the conversion offset is 459.669607 and the conversion factor is 5/9.\r\n\r\n\t\ty degrees Fahrenheit = (y + 459.669607) x 5/9 degrees Kelvin\r\n\r\n\t\tTo convert from Fahrenheit to Kelvin, first add the offset and then multiply by the conversion factor.\r\n\r\n\t\tTo convert from Kelvin to Fahrenheit, reverse the steps: first divide by the conversion factor and then subtract the offset.",
+      "skos:prefLabel": "conversion offset"
+    }
+  ]
+}

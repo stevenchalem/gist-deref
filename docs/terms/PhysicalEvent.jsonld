@@ -1,0 +1,63 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:PhysicalEvent",
+      "@type": "owl:Class",
+      "owl:equivalentClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b260"
+      },
+      "rdfs:comment": [
+        "DEFINITION: An event that can be said to have occurred at some place in space.",
+        "EXAMPLE: Negative examples: Excludes events that have no meaningful location, such as financial events or project milestones.",
+        "EXAMPLE: A meeting, a car accident."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Physical Event",
+      "rdfs:subClassOf": {
+        "@id": "gist:Event"
+      },
+      "skos:definition": "An event that can be said to have occurred at some place in space.",
+      "skos:example": [
+        "A meeting, a car accident.",
+        "Negative examples: Excludes events that have no meaningful location, such as financial events or project milestones."
+      ],
+      "skos:prefLabel": "Physical Event"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b260",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "gist:Event"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b261"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b261",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:occursIn"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:GeoLocation"
+      }
+    }
+  ]
+}

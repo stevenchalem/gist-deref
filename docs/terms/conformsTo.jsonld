@@ -1,0 +1,28 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "gist:conformsTo",
+  "@type": "owl:ObjectProperty",
+  "gist:rangeIncludes": {
+    "@id": "gist:Intention"
+  },
+  "rdfs:comment": [
+    "EXAMPLE: Meet an obligation; adhere to a specification or standard; meet terms and conditions of an offer; comply with a regulation.",
+    "DEFINITION: The subject is consistent with or satisfies the requirements, rules, or expectations established by the object."
+  ],
+  "rdfs:isDefinedBy": {
+    "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+  },
+  "rdfs:label": "conforms to",
+  "skos:definition": "The subject is consistent with or satisfies the requirements, rules, or expectations established by the object.",
+  "skos:example": "Meet an obligation; adhere to a specification or standard; meet terms and conditions of an offer; comply with a regulation.",
+  "skos:prefLabel": "conforms to"
+}

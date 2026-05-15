@@ -1,0 +1,77 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b314",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:containedText"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "gist:encryptedText",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:containedText"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b327",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:containedText"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "gist:uniqueText",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:containedText"
+      }
+    },
+    {
+      "@id": "gist:containedText",
+      "@type": "owl:DatatypeProperty",
+      "gist:domainIncludes": [
+        {
+          "@id": "gist:Text"
+        },
+        {
+          "@id": "gist:Content"
+        },
+        {
+          "@id": "gist:ContentExpression"
+        },
+        {
+          "@id": "gist:Tag"
+        }
+      ],
+      "rdfs:comment": [
+        "EXAMPLE: The string associated with a tag or with text content.",
+        "DEFINITION: Relates an entity containing textual information to the string constituting that textual information.",
+        "NOTE: If there are multiple strings associated with an entity, it is an implementation decision whether to combine them into a single contained text value or to use multiple contained text assertions."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "contained text",
+      "skos:definition": "Relates an entity containing textual information to the string constituting that textual information.",
+      "skos:example": "The string associated with a tag or with text content.",
+      "skos:prefLabel": "contained text",
+      "skos:scopeNote": "If there are multiple strings associated with an entity, it is an implementation decision whether to combine them into a single contained text value or to use multiple contained text assertions."
+    }
+  ]
+}

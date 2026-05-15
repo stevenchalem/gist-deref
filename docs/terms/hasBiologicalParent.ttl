@@ -1,0 +1,27 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:hasBiologicalParent a owl:ObjectProperty ;
+    rdfs:label "has biological parent"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates a living thing to its biological parent."^^xsd:string ;
+    rdfs:domain gist:LivingThing ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range gist:LivingThing ;
+    skos:definition "Relates a living thing to its biological parent."^^xsd:string ;
+    skos:prefLabel "has biological parent"^^xsd:string .
+
+[] a owl:Restriction ;
+    owl:onProperty gist:hasBiologicalParent ;
+    owl:someValuesFrom gist:LivingThing .
+
+[] a owl:Restriction ;
+    owl:allValuesFrom gist:Person ;
+    owl:onProperty gist:hasBiologicalParent .
+
+[] a owl:Restriction ;
+    owl:onProperty gist:hasBiologicalParent ;
+    owl:someValuesFrom gist:Person .
+

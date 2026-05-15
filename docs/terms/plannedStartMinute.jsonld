@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "gist:plannedStartMinute",
+  "@type": "owl:DatatypeProperty",
+  "rdfs:comment": [
+    "EXAMPLE: '2021-06-01T08:32:00-06:00'^^xsd:dateTime",
+    "NOTE: Used for things like meetings and time card entries, where the hour and minute are important. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual. Recommended usage is to zero out the seconds and microseconds to avoid spurious precision.",
+    "DEFINITION: The date and time that something is or was planned to start, with precision of one minute."
+  ],
+  "rdfs:isDefinedBy": {
+    "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+  },
+  "rdfs:label": "planned start minute",
+  "rdfs:range": {
+    "@id": "xsd:dateTime"
+  },
+  "rdfs:subPropertyOf": {
+    "@id": "gist:plannedStartDateTime"
+  },
+  "skos:definition": "The date and time that something is or was planned to start, with precision of one minute.",
+  "skos:example": "'2021-06-01T08:32:00-06:00'^^xsd:dateTime",
+  "skos:prefLabel": "planned start minute",
+  "skos:scopeNote": "Used for things like meetings and time card entries, where the hour and minute are important. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual. Recommended usage is to zero out the seconds and microseconds to avoid spurious precision."
+}

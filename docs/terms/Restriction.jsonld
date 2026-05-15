@@ -1,0 +1,68 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b37",
+      "rdf:first": {
+        "@id": "gist:Restriction"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "gist:Restriction",
+      "@type": "owl:Class",
+      "owl:equivalentClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b286"
+      },
+      "rdfs:comment": [
+        "DEFINITION: A description of things one is prevented from doing.",
+        "EXAMPLE: In the US, tax laws restrict the amount of money a person can put in retirement accounts over the course of a year."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Restriction",
+      "rdfs:subClassOf": {
+        "@id": "gist:Intention"
+      },
+      "skos:definition": "A description of things one is prevented from doing.",
+      "skos:example": "In the US, tax laws restrict the amount of money a person can put in retirement accounts over the course of a year.",
+      "skos:prefLabel": "Restriction"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b286",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "gist:Intention"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b287"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b287",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:prevents"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Behavior"
+      }
+    }
+  ]
+}

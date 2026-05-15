@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "gist:hasUnitGroup",
+  "@type": "owl:ObjectProperty",
+  "rdfs:comment": [
+    "DEFINITION: Relates an aspect to a unit group. The aspect can be measured using any of the members of the unit group.",
+    "EXAMPLE: The aspect distance can have a unit group that includes the units meter, inch, foot, etc."
+  ],
+  "rdfs:domain": {
+    "@id": "gist:Aspect"
+  },
+  "rdfs:isDefinedBy": {
+    "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+  },
+  "rdfs:label": "has unit group",
+  "rdfs:range": {
+    "@id": "gist:UnitGroup"
+  },
+  "skos:definition": "Relates an aspect to a unit group. The aspect can be measured using any of the members of the unit group.",
+  "skos:example": "The aspect distance can have a unit group that includes the units meter, inch, foot, etc.",
+  "skos:prefLabel": "has unit group"
+}

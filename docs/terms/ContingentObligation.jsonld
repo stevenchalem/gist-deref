@@ -1,0 +1,181 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:Offer",
+      "rdfs:subClassOf": {
+        "@id": "gist:ContingentObligation"
+      }
+    },
+    {
+      "@id": "gist:ContingentObligation",
+      "@type": "owl:Class",
+      "owl:equivalentClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b61"
+      },
+      "rdfs:comment": [
+        "DEFINITION: An obligation that is not yet firm. There is some contingent event whose occurrence will cause the obligation to become firm.",
+        "NOTE: A contingent obligation might have a getter counterparty (as in the case of insurance); but it might not (as in the case of an offer)."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Contingent Obligation",
+      "rdfs:subClassOf": {
+        "@id": "gist:Commitment"
+      },
+      "skos:definition": "An obligation that is not yet firm. There is some contingent event whose occurrence will cause the obligation to become firm.",
+      "skos:prefLabel": "Contingent Obligation",
+      "skos:scopeNote": "A contingent obligation might have a getter counterparty (as in the case of insurance); but it might not (as in the case of an offer)."
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b61",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "gist:Commitment"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b62"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b66"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b62",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasGiver"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b63"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b63",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "gist:Organization"
+          },
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b66",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isTriggeredBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Event"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b211",
+      "rdf:first": {
+        "@id": "gist:ContingentObligation"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b203"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b207"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b208"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b209"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b210"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b203",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasGiver"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b204"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b204",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "gist:Organization"
+          },
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b207",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:offersToProvide"
+      },
+      "owl:someValuesFrom": {
+        "@id": "owl:Thing"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b208",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:offersToReceive"
+      },
+      "owl:someValuesFrom": {
+        "@id": "owl:Thing"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b209",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:plannedEndDateTime"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b210",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:plannedStartDateTime"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:dateTime"
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Content owl:disjointWith gist:Organization .
+
+gist:GeoPoint owl:disjointWith gist:Organization .
+
+gist:GeoRegion owl:disjointWith gist:Organization .
+
+gist:IntellectualProperty owl:disjointWith gist:Organization .
+
+gist:Intention owl:disjointWith gist:Organization .
+
+gist:IntergovernmentalOrganization rdfs:subClassOf gist:Organization .
+
+gist:Language owl:disjointWith gist:Organization .
+
+gist:Magnitude owl:disjointWith gist:Organization .
+
+gist:isAssignmentOf gist:rangeIncludes gist:Organization .
+
+gist:GovernmentOrganization rdfs:subClassOf gist:Organization .
+
+gist:isMemberOf gist:rangeIncludes gist:Organization .
+
+gist:Organization a owl:Class ;
+    rdfs:label "Organization"^^xsd:string ;
+    rdfs:comment "DEFINITION: A structured entity formed to achieve specific goals, typically involving members with defined roles."^^xsd:string,
+        "EXAMPLE: Legal entities like companies; non-legal entities like clubs, committees, or departments."^^xsd:string,
+        "NOTE: Not all organizations have members, e.g. shell companies."^^xsd:string,
+        "NOTE: While typically the members of organizations are people, in some cases they are other organizations; e.g., the members of the United Nations are country governments."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    owl:disjointWith gist:PhysicalIdentifiableItem,
+        gist:PhysicalSubstance,
+        gist:SchemaMetaData,
+        gist:UnitOfMeasure ;
+    skos:definition "A structured entity formed to achieve specific goals, typically involving members with defined roles."^^xsd:string ;
+    skos:example "Legal entities like companies; non-legal entities like clubs, committees, or departments."^^xsd:string ;
+    skos:prefLabel "Organization"^^xsd:string ;
+    skos:scopeNote "Not all organizations have members, e.g. shell companies."^^xsd:string,
+        "While typically the members of organizations are people, in some cases they are other organizations; e.g., the members of the United Nations are country governments."^^xsd:string .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( gist:Person ) .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( [ a owl:Restriction ;
+                owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                owl:onClass gist:GovernmentOrganization ;
+                owl:onProperty [ owl:inverseOf gist:isMemberOf ] ] ) .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( gist:Person ) .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( gist:Person ) .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( gist:Person ) .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( gist:Person ) .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( gist:Person ) .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( gist:Person ) .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( gist:Person ) .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( gist:Person ) .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( gist:Person ) .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( gist:Person ) .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( gist:Person ) .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( gist:Person ) .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( gist:Person ) .
+
+[] rdf:first gist:Organization ;
+    rdf:rest ( gist:Person ) .
+

@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "gist:isProducedBy",
+  "@type": "owl:ObjectProperty",
+  "rdfs:comment": [
+    "DEFINITION: Relates something to the thing that created, composed, or brought it into existence.",
+    "EXAMPLE: A measurement is produced by a sensor.",
+    "EXAMPLE: A deliverable is produces by a task.",
+    "EXAMPLE: A painting is produced by a person."
+  ],
+  "rdfs:isDefinedBy": {
+    "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+  },
+  "rdfs:label": "is produced by",
+  "skos:definition": "Relates something to the thing that created, composed, or brought it into existence.",
+  "skos:example": [
+    "A deliverable is produces by a task.",
+    "A measurement is produced by a sensor.",
+    "A painting is produced by a person."
+  ],
+  "skos:prefLabel": "is produced by"
+}

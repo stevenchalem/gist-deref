@@ -1,0 +1,69 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:GeoRegion",
+      "owl:disjointWith": {
+        "@id": "gist:Template"
+      }
+    },
+    {
+      "@id": "gist:Template",
+      "@type": "owl:Class",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdfs:comment": [
+        "EXAMPLE: A die in manufacturing is used to make stamped parts; a form provides a structure and fields to be filled in; a cookie cutter is a template for cookies.",
+        "NOTE: Use gist:isBasedOn to link the object made from the template back to the template.",
+        "DEFINITION: Something used to make objects in its own image."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Template",
+      "skos:definition": "Something used to make objects in its own image.",
+      "skos:example": "A die in manufacturing is used to make stamped parts; a form provides a structure and fields to be filled in; a cookie cutter is a template for cookies.",
+      "skos:prefLabel": "Template",
+      "skos:scopeNote": "Use gist:isBasedOn to link the object made from the template back to the template."
+    },
+    {
+      "@id": "gist:TaskTemplate",
+      "rdfs:subClassOf": {
+        "@id": "gist:Template"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b321",
+      "rdf:first": {
+        "@id": "gist:Template"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b320"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b320",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasGoal"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Intention"
+      }
+    }
+  ]
+}

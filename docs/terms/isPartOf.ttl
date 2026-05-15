@@ -1,0 +1,22 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:isDirectPartOf rdfs:subPropertyOf gist:isPartOf .
+
+gist:isPartOf a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "is part of"^^xsd:string ;
+    rdfs:comment "DEFINITION: The relationship between a part and a whole where the part has independent existence."^^xsd:string,
+        "NOTE: Because the part has independent existence, there is no cascading delete."^^xsd:string,
+        "NOTE: The transitive version of gist:isDirectPartOf."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "The relationship between a part and a whole where the part has independent existence."^^xsd:string ;
+    skos:prefLabel "is part of"^^xsd:string ;
+    skos:scopeNote "Because the part has independent existence, there is no cascading delete."^^xsd:string,
+        "The transitive version of gist:isDirectPartOf."^^xsd:string .
+
+[] owl:inverseOf gist:isPartOf .
+

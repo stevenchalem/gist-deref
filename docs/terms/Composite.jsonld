@@ -1,0 +1,127 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:Network",
+      "rdfs:subClassOf": {
+        "@id": "gist:Composite"
+      }
+    },
+    {
+      "@id": "gist:Collection",
+      "rdfs:subClassOf": {
+        "@id": "gist:Composite"
+      }
+    },
+    {
+      "@id": "gist:Composite",
+      "@type": "owl:Class",
+      "rdfs:comment": [
+        "DEFINITION: Something which is made up of various parts or elements that are independently identifiable.",
+        "NOTE: This class is not disjoint with gist:Component, because a composite can itself be a component of a larger composite.",
+        "NOTE: This is an abstract class that will not be directly instantiated.",
+        "EXAMPLE: A library (collection of books); a network of pipes and valves; a computer network of routers and computers.",
+        "NOTE: Some composites, like systems, networks, and ordered collections, have internal organization, while others, such as unordered collections, typically do not."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Composite",
+      "skos:definition": "Something which is made up of various parts or elements that are independently identifiable.",
+      "skos:example": "A library (collection of books); a network of pipes and valves; a computer network of routers and computers.",
+      "skos:prefLabel": "Composite",
+      "skos:scopeNote": [
+        "This class is not disjoint with gist:Component, because a composite can itself be a component of a larger composite.",
+        "Some composites, like systems, networks, and ordered collections, have internal organization, while others, such as unordered collections, typically do not.",
+        "This is an abstract class that will not be directly instantiated."
+      ]
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b191",
+      "rdf:first": {
+        "@id": "gist:Composite"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b186"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b186",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b187"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b188"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b187",
+      "owl:inverseOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b188",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "gist:NetworkLink"
+          },
+          {
+            "@id": "gist:NetworkNode"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b312",
+      "rdf:first": {
+        "@id": "gist:Composite"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b310"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b310",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b311"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Component"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b311",
+      "owl:inverseOf": {
+        "@id": "gist:isDirectPartOf"
+      }
+    },
+    {
+      "@id": "gist:System",
+      "rdfs:subClassOf": {
+        "@id": "gist:Composite"
+      }
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:OrderedMember",
+      "rdfs:subClassOf": {
+        "@id": "gist:Component"
+      }
+    },
+    {
+      "@id": "gist:Component",
+      "@type": "owl:Class",
+      "owl:disjointWith": {
+        "@id": "gist:PhysicalSubstance"
+      },
+      "rdfs:comment": [
+        "DEFINITION: Something that, while having an independent existence, is inherently part of or designed to be part of a larger entity, such as a system or network.",
+        "NOTE: This class is not disjoint with gist:Composite, because a component may itself break down into smaller components.",
+        "NOTE: Physical substances, such as ingredients in a cake batter, do not meet the independent existence criterion, so are not components.",
+        "NOTE: Many things are in a trivial sense a part of a larger thing, but are not considered components because they are not inherently part of that larger thing. For example, while a book may be part of a library (a collection of books), it is not inherently so, and thus is not a component. A playing card, on the other hand, could be considered a component in (member of) a deck of cards. This may be use case-dependent; e.g., car parts might be modeled as components in an automobile manufacturing context but not in a retail auto parts store.",
+        "NOTE: A component may be designed or intended as part of a whole without actually being so; e.g., a car steering wheel that is not installed in any car.",
+        "NOTE: This is an abstract class that is not directly instantiated. Users will define subclasses that are meaningful to their domain of interest."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Component",
+      "skos:definition": "Something that, while having an independent existence, is inherently part of or designed to be part of a larger entity, such as a system or network.",
+      "skos:prefLabel": "Component",
+      "skos:scopeNote": [
+        "Physical substances, such as ingredients in a cake batter, do not meet the independent existence criterion, so are not components.",
+        "This is an abstract class that is not directly instantiated. Users will define subclasses that are meaningful to their domain of interest.",
+        "This class is not disjoint with gist:Composite, because a component may itself break down into smaller components.",
+        "Many things are in a trivial sense a part of a larger thing, but are not considered components because they are not inherently part of that larger thing. For example, while a book may be part of a library (a collection of books), it is not inherently so, and thus is not a component. A playing card, on the other hand, could be considered a component in (member of) a deck of cards. This may be use case-dependent; e.g., car parts might be modeled as components in an automobile manufacturing context but not in a retail auto parts store.",
+        "A component may be designed or intended as part of a whole without actually being so; e.g., a car steering wheel that is not installed in any car."
+      ]
+    },
+    {
+      "@id": "gist:NetworkNode",
+      "rdfs:subClassOf": {
+        "@id": "gist:Component"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b242",
+      "rdf:first": {
+        "@id": "gist:Component"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b231"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b239"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b240"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b241"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b231",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b232"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b233"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b235"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b232",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:precedesDirectly"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:OrderedMember"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b233",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b234"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:OrderedMember"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b234",
+      "owl:inverseOf": {
+        "@id": "gist:precedesDirectly"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b235",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:sequence"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:integer"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b239",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:providesOrderFor"
+      },
+      "owl:someValuesFrom": {
+        "@id": "owl:Thing"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b240",
+      "@type": "owl:Restriction",
+      "owl:allValuesFrom": {
+        "@id": "gist:OrderedCollection"
+      },
+      "owl:onProperty": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b241",
+      "@type": "owl:Restriction",
+      "owl:cardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:onProperty": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b310",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b311"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Component"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b311",
+      "owl:inverseOf": {
+        "@id": "gist:isDirectPartOf"
+      }
+    },
+    {
+      "@id": "gist:NetworkLink",
+      "rdfs:subClassOf": {
+        "@id": "gist:Component"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b198",
+      "rdf:first": {
+        "@id": "gist:Component"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b196"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b197"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b196",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isMemberOf"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Network"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b197",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:links"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:NetworkNode"
+      }
+    }
+  ]
+}

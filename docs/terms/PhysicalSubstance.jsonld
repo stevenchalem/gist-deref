@@ -1,0 +1,160 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:Content",
+      "owl:disjointWith": {
+        "@id": "gist:PhysicalSubstance"
+      }
+    },
+    {
+      "@id": "gist:GeoRegion",
+      "owl:disjointWith": {
+        "@id": "gist:PhysicalSubstance"
+      }
+    },
+    {
+      "@id": "gist:Intention",
+      "owl:disjointWith": {
+        "@id": "gist:PhysicalSubstance"
+      }
+    },
+    {
+      "@id": "gist:GeoPoint",
+      "owl:disjointWith": {
+        "@id": "gist:PhysicalSubstance"
+      }
+    },
+    {
+      "@id": "gist:Component",
+      "owl:disjointWith": {
+        "@id": "gist:PhysicalSubstance"
+      }
+    },
+    {
+      "@id": "gist:PhysicalSubstance",
+      "@type": "owl:Class",
+      "owl:disjointWith": {
+        "@id": "gist:UnitOfMeasure"
+      },
+      "rdfs:comment": [
+        "NOTE: This concept generally corresponds to mass nouns in English. By contrast, instances of gist:PhysicalIdentifiableItem, such as a computer, book, or car, are count nouns. Physical identifiable items are made up of physical substances; e.g., a cake is made up of butter, flour, and sugar; a ring is made of gold. If you divide a physical substance such as an amount of water into parts, you have different amounts of water otherwise indistinguishable from one another; if you divide a physical identifiable item such as a computer into parts, each part will be distinguishable from the original whole.",
+        "EXAMPLE: An amount of water, penicillin, sand, or gold.",
+        "DEFINITION: An undifferentiated amount of physical material which, when subdivided, results in each part being indistinguishable in nature from the whole and from every other part.",
+        "NOTE: An instance of this class has weight and takes up space. We mean the physical gold in a ring, not the concept of gold that shows up in the periodic table. The latter would be an instance of gist:KnowledgeConcept.",
+        "EXAMPLE: Negative example: the concept of gold."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Physical Substance",
+      "rdfs:subClassOf": [
+        {
+          "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b269"
+        },
+        {
+          "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b271"
+        }
+      ],
+      "skos:definition": "An undifferentiated amount of physical material which, when subdivided, results in each part being indistinguishable in nature from the whole and from every other part.",
+      "skos:example": [
+        "Negative example: the concept of gold.",
+        "An amount of water, penicillin, sand, or gold."
+      ],
+      "skos:prefLabel": "Physical Substance",
+      "skos:scopeNote": [
+        "This concept generally corresponds to mass nouns in English. By contrast, instances of gist:PhysicalIdentifiableItem, such as a computer, book, or car, are count nouns. Physical identifiable items are made up of physical substances; e.g., a cake is made up of butter, flour, and sugar; a ring is made of gold. If you divide a physical substance such as an amount of water into parts, you have different amounts of water otherwise indistinguishable from one another; if you divide a physical identifiable item such as a computer into parts, each part will be distinguishable from the original whole.",
+        "An instance of this class has weight and takes up space. We mean the physical gold in a ring, not the concept of gold that shows up in the periodic table. The latter would be an instance of gist:KnowledgeConcept."
+      ]
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b269",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b270"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b270",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_mass"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b271",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b272"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b272",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_volume"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b268",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isMadeUpOf"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:PhysicalSubstance"
+      }
+    },
+    {
+      "@id": "gist:Magnitude",
+      "owl:disjointWith": {
+        "@id": "gist:PhysicalSubstance"
+      }
+    },
+    {
+      "@id": "gist:Language",
+      "owl:disjointWith": {
+        "@id": "gist:PhysicalSubstance"
+      }
+    },
+    {
+      "@id": "gist:isMadeUpOf",
+      "rdfs:range": {
+        "@id": "gist:PhysicalSubstance"
+      }
+    },
+    {
+      "@id": "gist:Organization",
+      "owl:disjointWith": {
+        "@id": "gist:PhysicalSubstance"
+      }
+    },
+    {
+      "@id": "gist:IntellectualProperty",
+      "owl:disjointWith": {
+        "@id": "gist:PhysicalSubstance"
+      }
+    }
+  ]
+}

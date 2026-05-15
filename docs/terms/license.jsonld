@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "gist:license",
+  "@type": "owl:AnnotationProperty",
+  "rdfs:comment": [
+    "EXAMPLE: The gist ontology is licensed under the CC By 4.0 license.",
+    "NOTE: Could refer to a license object by URI or name or could consist of the license text itself.",
+    "DEFINITION: Relates something to its conditions of use."
+  ],
+  "rdfs:isDefinedBy": {
+    "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+  },
+  "rdfs:label": "license",
+  "skos:definition": "Relates something to its conditions of use.",
+  "skos:example": "The gist ontology is licensed under the CC By 4.0 license.",
+  "skos:prefLabel": "license",
+  "skos:scopeNote": "Could refer to a license object by URI or name or could consist of the license text itself."
+}

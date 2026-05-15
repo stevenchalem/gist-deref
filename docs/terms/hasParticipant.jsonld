@@ -1,0 +1,76 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:goesToAgent",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:hasParticipant"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b324",
+      "@type": "owl:Restriction",
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "2"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasParticipant"
+      }
+    },
+    {
+      "@id": "gist:hasGiver",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:hasParticipant"
+      }
+    },
+    {
+      "@id": "gist:comesFromAgent",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:hasParticipant"
+      }
+    },
+    {
+      "@id": "gist:hasParty",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:hasParticipant"
+      }
+    },
+    {
+      "@id": "gist:hasParticipant",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": [
+        "EXAMPLE: An event of transferring money has a participating account that receives the money.",
+        "DEFINITION: Relates something (e.g. an agreement) to things that play a role, or take part or are otherwise involved in some way.",
+        "NOTE: The thing with participants will often be an agreement, event or obligation. Participation does not imply agency.",
+        "NOTE: This will most often be used as an abstract property. Use subproperties that indicate the nature of the participation (e.g. hasBorrower, hasVenue)."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "has participant",
+      "skos:definition": "Relates something (e.g. an agreement) to things that play a role, or take part or are otherwise involved in some way.",
+      "skos:example": "An event of transferring money has a participating account that receives the money.",
+      "skos:prefLabel": "has participant",
+      "skos:scopeNote": [
+        "This will most often be used as an abstract property. Use subproperties that indicate the nature of the participation (e.g. hasBorrower, hasVenue).",
+        "The thing with participants will often be an agreement, event or obligation. Participation does not imply agency."
+      ]
+    },
+    {
+      "@id": "gist:hasRecipient",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:hasParticipant"
+      }
+    }
+  ]
+}

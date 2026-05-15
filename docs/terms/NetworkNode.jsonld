@@ -1,0 +1,94 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:NetworkNode",
+      "@type": "owl:Class",
+      "rdfs:comment": [
+        "EXAMPLE: A person's account is a node in a social network; a valve is a node in a network of pipes.",
+        "DEFINITION: A node in a network."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Network Node",
+      "rdfs:subClassOf": [
+        {
+          "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b201"
+        },
+        {
+          "@id": "gist:Component"
+        }
+      ],
+      "skos:definition": "A node in a network.",
+      "skos:example": "A person's account is a node in a social network; a valve is a node in a network of pipes.",
+      "skos:prefLabel": "Network Node"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b201",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isMemberOf"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Network"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b190",
+      "rdf:first": {
+        "@id": "gist:NetworkNode"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b197",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:links"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:NetworkNode"
+      }
+    },
+    {
+      "@id": "gist:links",
+      "gist:rangeIncludes": {
+        "@id": "gist:NetworkNode"
+      }
+    },
+    {
+      "@id": "gist:linksTo",
+      "gist:rangeIncludes": {
+        "@id": "gist:NetworkNode"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b193",
+      "@type": "owl:Restriction",
+      "owl:allValuesFrom": {
+        "@id": "gist:NetworkNode"
+      },
+      "owl:onProperty": {
+        "@id": "gist:links"
+      }
+    },
+    {
+      "@id": "gist:linksFrom",
+      "gist:rangeIncludes": {
+        "@id": "gist:NetworkNode"
+      }
+    }
+  ]
+}

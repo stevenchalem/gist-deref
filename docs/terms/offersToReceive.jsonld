@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:offersToReceive",
+      "@type": "owl:ObjectProperty",
+      "gist:domainIncludes": {
+        "@id": "gist:Offer"
+      },
+      "rdfs:comment": [
+        "DEFINITION: Relates an offer to the thing expected in return for the offered item.",
+        "NOTE: This will most often be an amount of money, but could be anything of value, as in swaps.",
+        "EXAMPLE: A vendor makes an offer to receive a particular amount of money in exchange for the offered product; an offer to receive a home in exchange for an amount of money."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "offers to receive",
+      "skos:definition": "Relates an offer to the thing expected in return for the offered item.",
+      "skos:example": "A vendor makes an offer to receive a particular amount of money in exchange for the offered product; an offer to receive a home in exchange for an amount of money.",
+      "skos:prefLabel": "offers to receive",
+      "skos:scopeNote": "This will most often be an amount of money, but could be anything of value, as in swaps."
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b208",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:offersToReceive"
+      },
+      "owl:someValuesFrom": {
+        "@id": "owl:Thing"
+      }
+    }
+  ]
+}

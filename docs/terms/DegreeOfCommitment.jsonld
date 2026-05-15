@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:DegreeOfCommitment",
+      "@type": "owl:Class",
+      "rdfs:comment": [
+        "DEFINITION: The difficulty of reversing a commitment.",
+        "EXAMPLE: A car rental typically has a lower degree of commitment than an airfare reservation."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Degree Of Commitment",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      },
+      "skos:definition": "The difficulty of reversing a commitment.",
+      "skos:example": "A car rental typically has a lower degree of commitment than an airfare reservation.",
+      "skos:prefLabel": "Degree Of Commitment"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b42",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isCategorizedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:DegreeOfCommitment"
+      }
+    }
+  ]
+}

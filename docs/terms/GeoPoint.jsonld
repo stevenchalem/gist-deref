@@ -1,0 +1,164 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:Content",
+      "owl:disjointWith": {
+        "@id": "gist:GeoPoint"
+      }
+    },
+    {
+      "@id": "gist:GeoPoint",
+      "@type": "owl:Class",
+      "owl:disjointWith": [
+        {
+          "@id": "gist:IntellectualProperty"
+        },
+        {
+          "@id": "gist:Organization"
+        },
+        {
+          "@id": "gist:Language"
+        },
+        {
+          "@id": "gist:Magnitude"
+        },
+        {
+          "@id": "gist:PhysicalIdentifiableItem"
+        },
+        {
+          "@id": "gist:PhysicalSubstance"
+        },
+        {
+          "@id": "gist:UnitOfMeasure"
+        },
+        {
+          "@id": "gist:Intention"
+        }
+      ],
+      "owl:equivalentClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b105"
+      },
+      "rdfs:comment": "DEFINITION: An individual point on or above the Earth's surface, identified by latitude, longitude and altitude. Altitude is the distance measured from sea level. If altitude is missing, the point is assumed to be at the Earth's surface. These points are described using decimal latitude/longitude.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Geographic Point",
+      "rdfs:subClassOf": {
+        "@id": "gist:GeoLocation"
+      },
+      "skos:definition": "An individual point on or above the Earth's surface, identified by latitude, longitude and altitude. Altitude is the distance measured from sea level. If altitude is missing, the point is assumed to be at the Earth's surface. These points are described using decimal latitude/longitude.",
+      "skos:prefLabel": "Geographic Point"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b105",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b106"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b108"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b109"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b106",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b107"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b107",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_altitude"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b108",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:latitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:double"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b109",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:longitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:double"
+      }
+    },
+    {
+      "@id": "gist:latitude",
+      "rdfs:domain": {
+        "@id": "gist:GeoPoint"
+      }
+    },
+    {
+      "@id": "gist:longitude",
+      "rdfs:domain": {
+        "@id": "gist:GeoPoint"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b119",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b120"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:GeoPoint"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b120",
+      "owl:inverseOf": {
+        "@id": "gist:isMemberOf"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b126",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b127"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:GeoPoint"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b127",
+      "owl:inverseOf": {
+        "@id": "gist:isGeoContainedIn"
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b53",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isCategorizedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:GeneralMediaType"
+      }
+    },
+    {
+      "@id": "gist:GeneralMediaType",
+      "@type": "owl:Class",
+      "rdfs:comment": [
+        "DEFINITION: The real-world media type for content.",
+        "EXAMPLE: Audio, still image, video, textual, physical (e.g., a statue), performance (e.g., a play), oil or pastel for a painting."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "General Media Type",
+      "rdfs:subClassOf": {
+        "@id": "gist:Category"
+      },
+      "skos:definition": "The real-world media type for content.",
+      "skos:example": "Audio, still image, video, textual, physical (e.g., a statue), performance (e.g., a play), oil or pastel for a painting.",
+      "skos:prefLabel": "General Media Type"
+    }
+  ]
+}

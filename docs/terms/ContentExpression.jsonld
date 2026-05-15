@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:containedText",
+      "gist:domainIncludes": {
+        "@id": "gist:ContentExpression"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b182",
+      "rdf:first": {
+        "@id": "gist:ContentExpression"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b174"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b178"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b174",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:comesFromAgent"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b175"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b175",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "gist:Organization"
+          },
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b178",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:goesToAgent"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b179"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b179",
+      "@type": "owl:Class",
+      "owl:unionOf": {
+        "@list": [
+          {
+            "@id": "gist:Organization"
+          },
+          {
+            "@id": "gist:Person"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "gist:Text",
+      "rdfs:subClassOf": {
+        "@id": "gist:ContentExpression"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b328",
+      "rdf:first": {
+        "@id": "gist:ContentExpression"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b326"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b327"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b326",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isExpressedIn"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Language"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b327",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:containedText"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "gist:Message",
+      "rdfs:subClassOf": {
+        "@id": "gist:ContentExpression"
+      }
+    },
+    {
+      "@id": "gist:FormattedContent",
+      "rdfs:subClassOf": {
+        "@id": "gist:ContentExpression"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b103",
+      "rdf:first": {
+        "@id": "gist:ContentExpression"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b102"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b102",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isExpressedIn"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:MediaType"
+      }
+    },
+    {
+      "@id": "gist:ContentExpression",
+      "@type": "owl:Class",
+      "rdfs:comment": [
+        "NOTE: While the content expression is less abstract than a 'Work,' it is more abstract than the specific physical items that render the expression. For example, any physical or electronic book with ISBN-13 978-1953649805 is associated with the same content expression.",
+        "NOTE: If it contains text (written or spoken), it will be expressed in a language.",
+        "EXAMPLE: A specific print or audio edition of 'The Adventures of Huckleberry Finn,' such as the one identified by ISBN-13 978-1953649805.",
+        "DEFINITION: Content reduced to text, audio, etc."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Content Expression",
+      "rdfs:subClassOf": [
+        {
+          "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b53"
+        },
+        {
+          "@id": "gist:Content"
+        }
+      ],
+      "skos:definition": "Content reduced to text, audio, etc.",
+      "skos:example": "A specific print or audio edition of 'The Adventures of Huckleberry Finn,' such as the one identified by ISBN-13 978-1953649805.",
+      "skos:prefLabel": "Content Expression",
+      "skos:scopeNote": [
+        "While the content expression is less abstract than a 'Work,' it is more abstract than the specific physical items that render the expression. For example, any physical or electronic book with ISBN-13 978-1953649805 is associated with the same content expression.",
+        "If it contains text (written or spoken), it will be expressed in a language."
+      ]
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b53",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isCategorizedBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:GeneralMediaType"
+      }
+    }
+  ]
+}

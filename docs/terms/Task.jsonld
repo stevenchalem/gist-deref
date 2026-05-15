@@ -1,0 +1,115 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b280",
+      "rdf:first": {
+        "@id": "gist:Task"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b278"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b278",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b279"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Task"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b279",
+      "owl:inverseOf": {
+        "@id": "gist:isPartOf"
+      }
+    },
+    {
+      "@id": "gist:ScheduledTask",
+      "rdfs:subClassOf": {
+        "@id": "gist:Task"
+      }
+    },
+    {
+      "@id": "gist:Project",
+      "rdfs:subClassOf": {
+        "@id": "gist:Task"
+      }
+    },
+    {
+      "@id": "gist:Task",
+      "@type": "owl:Class",
+      "owl:equivalentClass": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b315"
+      },
+      "rdfs:comment": [
+        "NOTE: Something that could potentially be executed, which is merely described but not proposed in any specific way, such as a business process for onboarding a new employee, or the steps in a recipe for making polyethylene from ethylene, is not a task but rather a task template.",
+        "NOTE: This term is broader than the English word 'task,' which implies assignment, responsibility, or duty. In ordinary English going to a concert has a goal but is (generally) done for pleasure rather than out of obligation, and would not be considered a task, while according to the gist definition it is a task. The expansion of meaning is deliberate, so that anything that has a goal and can be specified by a task template is a task.",
+        "NOTE: Use the property gist:isBasedOn to link a task back to the task template.",
+        "DEFINITION: An activity or piece of work that is either proposed, planned, scheduled, underway, or completed."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Task",
+      "rdfs:subClassOf": {
+        "@id": "gist:Event"
+      },
+      "skos:definition": "An activity or piece of work that is either proposed, planned, scheduled, underway, or completed.",
+      "skos:prefLabel": "Task",
+      "skos:scopeNote": [
+        "Use the property gist:isBasedOn to link a task back to the task template.",
+        "This term is broader than the English word 'task,' which implies assignment, responsibility, or duty. In ordinary English going to a concert has a goal but is (generally) done for pleasure rather than out of obligation, and would not be considered a task, while according to the gist definition it is a task. The expansion of meaning is deliberate, so that anything that has a goal and can be specified by a task template is a task.",
+        "Something that could potentially be executed, which is merely described but not proposed in any specific way, such as a business process for onboarding a new employee, or the steps in a recipe for making polyethylene from ethylene, is not a task but rather a task template."
+      ]
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b315",
+      "@type": "owl:Class",
+      "owl:intersectionOf": {
+        "@list": [
+          {
+            "@id": "gist:Event"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b316"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b316",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasGoal"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Intention"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b296",
+      "rdf:first": {
+        "@id": "gist:Task"
+      },
+      "rdf:rest": {
+        "@list": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:prevents",
+      "@type": "owl:ObjectProperty",
+      "gist:isSupersededBy": {
+        "@id": "gist:prohibits"
+      },
+      "owl:deprecated": true,
+      "owl:equivalentProperty": {
+        "@id": "gist:prohibits"
+      },
+      "rdfs:comment": [
+        "DEFINITION: Relates an intention to behavior that it prohibits.",
+        "EXAMPLE: A city ordinance prohibits jaywalking."
+      ],
+      "rdfs:domain": {
+        "@id": "gist:Intention"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "prevents",
+      "rdfs:range": {
+        "@id": "gist:Behavior"
+      },
+      "skos:definition": "Relates an intention to behavior that it prohibits.",
+      "skos:editorialNote": "See guidance on removing this term in the next major release at https://github.com/semanticarts/gist/issues/1380#issuecomment-3617257248",
+      "skos:example": "A city ordinance prohibits jaywalking.",
+      "skos:prefLabel": "prevents"
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b287",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:prevents"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Behavior"
+      }
+    }
+  ]
+}

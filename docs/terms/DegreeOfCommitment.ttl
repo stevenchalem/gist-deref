@@ -1,0 +1,20 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:DegreeOfCommitment a owl:Class ;
+    rdfs:label "Degree Of Commitment"^^xsd:string ;
+    rdfs:comment "DEFINITION: The difficulty of reversing a commitment."^^xsd:string,
+        "EXAMPLE: A car rental typically has a lower degree of commitment than an airfare reservation."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Category ;
+    skos:definition "The difficulty of reversing a commitment."^^xsd:string ;
+    skos:example "A car rental typically has a lower degree of commitment than an airfare reservation."^^xsd:string ;
+    skos:prefLabel "Degree Of Commitment"^^xsd:string .
+
+[] a owl:Restriction ;
+    owl:onProperty gist:isCategorizedBy ;
+    owl:someValuesFrom gist:DegreeOfCommitment .
+

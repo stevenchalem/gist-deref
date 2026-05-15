@@ -1,0 +1,311 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:HistoricalEvent",
+      "rdfs:subClassOf": {
+        "@id": "gist:Event"
+      }
+    },
+    {
+      "@id": "gist:PhysicalEvent",
+      "rdfs:subClassOf": {
+        "@id": "gist:Event"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b317",
+      "rdf:first": {
+        "@id": "gist:Event"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b316"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b316",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasGoal"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Intention"
+      }
+    },
+    {
+      "@id": "gist:Event",
+      "@type": "owl:Class",
+      "owl:disjointWith": [
+        {
+          "@id": "gist:Language"
+        },
+        {
+          "@id": "gist:TimeInterval"
+        },
+        {
+          "@id": "gist:Magnitude"
+        },
+        {
+          "@id": "gist:UnitOfMeasure"
+        }
+      ],
+      "rdfs:comment": [
+        "DEFINITION: Something that occurs over a period of time, often characterized as an activity being carried out by some person, organization, or software application or brought about by natural forces.",
+        "NOTE: An event does not necessarily have either planned or actual start or end datetimes. For example, a conference can be in the planning phase without any dates selected, but is nevertheless an (unscheduled) event. The subclasses of gist:Event state particular restrictions on planned and actual start and end dates.",
+        "NOTE: An event occurs during a time interval, which is distinct from the event.",
+        "EXAMPLE: A transaction, conference, baseball game, earthquake."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "Event",
+      "skos:definition": "Something that occurs over a period of time, often characterized as an activity being carried out by some person, organization, or software application or brought about by natural forces.",
+      "skos:example": "A transaction, conference, baseball game, earthquake.",
+      "skos:prefLabel": "Event",
+      "skos:scopeNote": [
+        "An event occurs during a time interval, which is distinct from the event.",
+        "An event does not necessarily have either planned or actual start or end datetimes. For example, a conference can be in the planning phase without any dates selected, but is nevertheless an (unscheduled) event. The subclasses of gist:Event state particular restrictions on planned and actual start and end dates."
+      ]
+    },
+    {
+      "@id": "gist:Category",
+      "owl:disjointWith": {
+        "@id": "gist:Event"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b298",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b299"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Event"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b299",
+      "owl:inverseOf": {
+        "@id": "gist:isBasedOn"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b58",
+      "rdf:first": {
+        "@id": "gist:Event"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b55"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b57"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b55",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:hasMagnitude"
+      },
+      "owl:someValuesFrom": {
+        "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b56"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b56",
+      "@type": "owl:Restriction",
+      "owl:hasValue": {
+        "@id": "gistd:_Aspect_probability"
+      },
+      "owl:onProperty": {
+        "@id": "gist:hasAspect"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b57",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isTriggeredBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Event"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b292",
+      "rdf:first": {
+        "@id": "gist:Event"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b291"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b291",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:plannedStartDateTime"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b262",
+      "rdf:first": {
+        "@id": "gist:Event"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b261"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b261",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:occursIn"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:GeoLocation"
+      }
+    },
+    {
+      "@id": "gist:Determination",
+      "rdfs:subClassOf": {
+        "@id": "gist:Event"
+      }
+    },
+    {
+      "@id": "gist:Task",
+      "rdfs:subClassOf": {
+        "@id": "gist:Event"
+      }
+    },
+    {
+      "@id": "gist:ScheduledEvent",
+      "rdfs:subClassOf": {
+        "@id": "gist:Event"
+      }
+    },
+    {
+      "@id": "gist:Aspect",
+      "owl:disjointWith": {
+        "@id": "gist:Event"
+      }
+    },
+    {
+      "@id": "gist:Transaction",
+      "rdfs:subClassOf": {
+        "@id": "gist:Event"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b50",
+      "rdf:first": {
+        "@id": "gist:Event"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b48"
+          },
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b49"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b48",
+      "@type": "owl:Restriction",
+      "owl:cardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:onProperty": {
+        "@id": "gist:actualStartDateTime"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b49",
+      "@type": "owl:Restriction",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "0"
+      },
+      "owl:onProperty": {
+        "@id": "gist:actualEndDateTime"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b66",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:isTriggeredBy"
+      },
+      "owl:someValuesFrom": {
+        "@id": "gist:Event"
+      }
+    },
+    {
+      "@id": "gist:ContemporaryEvent",
+      "rdfs:subClassOf": {
+        "@id": "gist:Event"
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b138",
+      "rdf:first": {
+        "@id": "gist:Event"
+      },
+      "rdf:rest": {
+        "@list": [
+          {
+            "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b137"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b137",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:actualEndDateTime"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "gist:ContingentEvent",
+      "rdfs:subClassOf": {
+        "@id": "gist:Event"
+      }
+    }
+  ]
+}

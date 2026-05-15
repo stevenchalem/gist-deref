@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:ndfd66d7f0f4d459a8ec599499a65c2e2b209",
+      "@type": "owl:Restriction",
+      "owl:onProperty": {
+        "@id": "gist:plannedEndDateTime"
+      },
+      "owl:someValuesFrom": {
+        "@id": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "gist:plannedEndDate",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:plannedEndDateTime"
+      }
+    },
+    {
+      "@id": "gist:plannedEndDateTime",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": [
+        "NOTE: This is an abstraction over the various precisions of planned end time, and is not expected to be asserted directly. Values of predicates with different precisions can be compared since they are all formally xsd:datetimes.",
+        "DEFINITION: The date that something is or was planned to end, with no implied precision.",
+        "NOTE: This property, unlike gist:actualEndDateTime, does not have a subproperty for microsecond precision, because planned times typically are not expressed at that level of granularity. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual."
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "planned end date time",
+      "rdfs:range": {
+        "@id": "xsd:dateTime"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "gist:endDateTime"
+      },
+      "skos:definition": "The date that something is or was planned to end, with no implied precision.",
+      "skos:prefLabel": "planned end date time",
+      "skos:scopeNote": [
+        "This is an abstraction over the various precisions of planned end time, and is not expected to be asserted directly. Values of predicates with different precisions can be compared since they are all formally xsd:datetimes.",
+        "This property, unlike gist:actualEndDateTime, does not have a subproperty for microsecond precision, because planned times typically are not expressed at that level of granularity. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual."
+      ]
+    },
+    {
+      "@id": "gist:plannedEndMinute",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:plannedEndDateTime"
+      }
+    },
+    {
+      "@id": "gist:plannedEndYear",
+      "rdfs:subPropertyOf": {
+        "@id": "gist:plannedEndDateTime"
+      }
+    }
+  ]
+}

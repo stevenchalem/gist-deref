@@ -1,0 +1,50 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "gist": "https://w3id.org/semanticarts/ns/ontology/gist/",
+    "gistd": "https://w3id.org/semanticarts/ns/data/gist/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "gist:prevents",
+      "gist:isSupersededBy": {
+        "@id": "gist:prohibits"
+      },
+      "owl:equivalentProperty": {
+        "@id": "gist:prohibits"
+      }
+    },
+    {
+      "@id": "gist:prohibits",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": [
+        "DEFINITION: Relates an intention to a behavior that it forbids or seeks to prevent.",
+        "NOTE: A behavior can be prohibited without being prevented. For example, a speed limit may prohibit driving faster than a stated speed but does not always succeed in preventing drivers from exceeding that speed.",
+        "EXAMPLE: Private property laws prohibit someone from entering private land marked with a 'No Trespassing' sign.",
+        "EXAMPLE: A city ordinance prohibits jaywalking."
+      ],
+      "rdfs:domain": {
+        "@id": "gist:Intention"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      },
+      "rdfs:label": "prohibits",
+      "rdfs:range": {
+        "@id": "gist:Behavior"
+      },
+      "skos:definition": "Relates an intention to a behavior that it forbids or seeks to prevent.",
+      "skos:example": [
+        "A city ordinance prohibits jaywalking.",
+        "Private property laws prohibit someone from entering private land marked with a 'No Trespassing' sign."
+      ],
+      "skos:prefLabel": "prohibits",
+      "skos:scopeNote": "A behavior can be prohibited without being prevented. For example, a speed limit may prohibit driving faster than a stated speed but does not always succeed in preventing drivers from exceeding that speed."
+    }
+  ]
+}

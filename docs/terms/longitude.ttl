@@ -1,0 +1,19 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:longitude a owl:DatatypeProperty ;
+    rdfs:label "longitude"^^xsd:string ;
+    rdfs:comment "DEFINITION: Degrees from the prime meridian."^^xsd:string ;
+    rdfs:domain gist:GeoPoint ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:double ;
+    skos:definition "Degrees from the prime meridian."^^xsd:string ;
+    skos:prefLabel "longitude"^^xsd:string .
+
+[] a owl:Restriction ;
+    owl:onProperty gist:longitude ;
+    owl:someValuesFrom xsd:double .
+
