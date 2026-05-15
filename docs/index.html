@@ -209,6 +209,7 @@
           <option value="application/rdf+xml">application/rdf+xml</option>
           <option value="application/ld+json">application/ld+json</option>
           <option value="application/json">application/json</option>
+          <option value="text/html">text/html</option>
         </select>
       </div>
 
@@ -262,7 +263,15 @@
 
       try {
         const term = normalizeTerm(termInput.value);
-        const extension = formats[mimeSelect.value];
+        const mimeType = mimeSelect.value;
+
+        if (mimeType === "text/html") {
+          termInput.value = term;
+          window.location.href = `ontologies/gist-widoco.html#${encodeURIComponent(term)}`;
+          return;
+        }
+
+        const extension = formats[mimeType];
 
         if (!extension) {
           throw new Error("Unsupported MIME type.");
