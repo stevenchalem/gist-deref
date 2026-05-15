@@ -117,6 +117,11 @@ HTML documentation. The current repository snapshot includes generated per-term
 files under `docs/terms`; add or publish the matching `ontology/` and `html/`
 assets before relying on those routes in production.
 
+The local `docs/ontologies/gist-widoco.html` file has been patched so fragment
+URLs with bare gist local names, such as `#Address`, scroll to the WIDOCO entity
+whose HTML `id` is the full gist IRI. Preserve or reapply that hash-navigation
+change if the WIDOCO page is regenerated.
+
 ## Example
 
 After publication and `w3id.org` configuration, clients can request a specific
